@@ -55,7 +55,7 @@ const Navbar = () => {
              open ? "left-0" : "left-[-120%]"
            } `}
         >
-          <div className="flex container m-auto gap-4 text-[16px] font-bold flex-col md:flex-row text-xl mt-20 md:mt-0 md:font-normal md:justify-center">
+          <div className="flex  gap-4  font-bold flex-col md:flex-row text-2xl mt-36 md:mt-0 md:font-normal md:justify-center md:text-[16px]">
             <a href="" className="duration-500 hover:text-slate-400">
               Blog
             </a>
@@ -69,7 +69,7 @@ const Navbar = () => {
               Men haqimda
             </a>
           </div>
-          <div className="flex gap-3 container m-auto md:hidden  ">
+          <div className="flex gap-3  md:hidden  ">
             <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
