@@ -12,7 +12,7 @@ const AppLayout = ({ children }) => {
       </Head>
       <main>
         <Navbar />
-        {children}
+        <div>{children}</div>
       </main>
     </div>
   );
