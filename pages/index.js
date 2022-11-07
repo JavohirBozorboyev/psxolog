@@ -1,7 +1,8 @@
 import Image from "next/image";
-import BlogSlider from "../module/Home/BlogSlider";
+
 import Header from "../module/Home/Header";
 import Info from "../module/Home/Info";
+import Blog from "../module/Home/Blog";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <main>
         <Header />
         <Info />
-        <BlogSlider />
+        <Blog />
       </main>
     </>
   );
