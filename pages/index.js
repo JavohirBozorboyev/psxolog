@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Header from "../module/Home/Header";
 import Info from "../module/Home/Info";
 import Blog from "../module/Home/Blog";

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -16,16 +17,28 @@ const Header = () => {
             repudiandae dignissimos repellat quibusdam quisquam inventore rerum
             iure nulla ut.
           </p>
-          <a
-            href=""
-            className="mt-8 flex p-2 px-6 font-bold text-lg uppercase bg-white  duration-500 hover:border-red-500 hover:text-red-500 border-4 bg-transparent "
-            style={{
-              clipPath:
-                " polygon(11% 0, 80% 0%, 100% 0, 100% 56%, 87% 100%, 0 100%, 0% 80%, 0 46%)",
-            }}
-          >
-            Get Started
-          </a>
+          <div className="flex gap-5 flex-wrap mt-8">
+            <Link
+              href=""
+              className="flex p-2 px-6 font-bold text-lg uppercase bg-white  duration-500 hover:border-red-500 hover:text-red-500 border-4 bg-transparent "
+              style={{
+                clipPath:
+                  " polygon(11% 0, 80% 0%, 100% 0, 100% 56%, 87% 100%, 0 100%, 0% 80%, 0 46%)",
+              }}
+            >
+              Get Started
+            </Link>
+            <Link
+              href=""
+              className=" ml-28 md:ml-0 flex p-2 px-6 font-bold text-lg uppercase bg-white  duration-500 hover:border-red-500 hover:text-red-500 border-4 bg-transparent "
+              style={{
+                clipPath:
+                  " polygon(11% 0, 80% 0%, 100% 0, 100% 56%, 87% 100%, 0 100%, 0% 80%, 0 46%)",
+              }}
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
         <div className="w-full md:w-1/2 flex justify-end mt-8 md:mt-0">
           <img

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -14,9 +15,9 @@ const Navbar = () => {
     >
       <div className="container px-3 sm:px-0 m-auto py-3 flex flex-col items-center justify-between md:flex-row ">
         <div className="w-full flex items-center justify-between md:w-1/2 xl:w-1/3">
-          <a href="" className="text-2xl uppercase font-bold">
+          <Link href="" className="text-2xl uppercase font-bold">
             Brand Name
-          </a>
+          </Link>
           <div onClick={handler} className="md:hidden">
             {open ? (
               <svg
@@ -59,18 +60,18 @@ const Navbar = () => {
            } `}
         >
           <div className="flex  gap-4  font-bold flex-col md:flex-row text-2xl mt-36 md:mt-0 md:font-normal md:justify-end md:text-[16px]">
-            <a href="" className="duration-500 hover:text-red-500">
+            <Link href="" className="duration-500 hover:text-red-500">
               Blog
-            </a>
-            <a href="" className="duration-500 hover:text-red-500">
+            </Link>
+            <Link href="" className="duration-500 hover:text-red-500">
               Imtixon
-            </a>
-            <a href="" className="duration-500 hover:text-red-500">
+            </Link>
+            <Link href="" className="duration-500 hover:text-red-500">
               Contact
-            </a>
-            <a href="" className="duration-500 hover:text-red-500">
+            </Link>
+            <Link href="" className="duration-500 hover:text-red-500">
               Men haqimda
-            </a>
+            </Link>
           </div>
           <div className="flex gap-3  md:hidden  ">
             <a href="">
