@@ -63,7 +63,7 @@ const Navbar = () => {
             <Link href="" className="duration-500 hover:text-red-500">
               Blog
             </Link>
-            <Link href="" className="duration-500 hover:text-red-500">
+            <Link href="/quiz" className="duration-500 hover:text-red-500">
               Imtixon
             </Link>
             <Link href="" className="duration-500 hover:text-red-500">
