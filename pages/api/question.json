@@ -27,7 +27,7 @@
     ]
   },
   {
-    "question": "Which class in Tailwind is used to set flex direction of column?",
+    "question": "Which className in Tailwind is used to set flex direction of column?",
     "answerOptions": [
       { "answer": "col" },
       { "answer": "col-flex" },

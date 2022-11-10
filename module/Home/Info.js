@@ -1,21 +1,12 @@
 import React from "react";
+import SectionTitle from "./SectionTitle";
 
 const Info = () => {
   return (
     <>
       <div className="py-12">
         <div className="container px-3 md:px-0 m-auto ">
-          <div>
-            <h1
-              style={{
-                clipPath:
-                  " polygon(11% 0, 80% 0%, 100% 0, 100% 56%, 87% 100%, 0 100%, 0% 80%, 0 46%)",
-              }}
-              className="text-3xl text-slate-900 text-center  uppercase border-2 border-slate-900 py-4"
-            >
-              This is Demo
-            </h1>
-          </div>
+          <SectionTitle>My Youtube Chanel</SectionTitle>
 
           <div className=" flex justify-center  mt-10 px-2">
             <iframe
