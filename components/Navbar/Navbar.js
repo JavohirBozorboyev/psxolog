@@ -11,8 +11,8 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-slate-900 shadow border-b-[1px]">
-        <div className="container mx-auto py-4 px-4 lg:px-0 flex  justify-between flex-col">
-          <div className="flex items-center justify-between ">
+        <div className="container mx-auto py-4 px-4 lg:px-0 flex items-center  justify-between ">
+          <div className="flex items-center justify-between w-full ">
             <Link href="/" className=" text-2xl uppercase font-bold text-white">
               Brand Name
             </Link>
@@ -35,6 +35,27 @@ const Navbar = () => {
               </svg>
             </div>
           </div>
+          <div className="hidden md:flex text-gray-400  gap-4">
+            <Link href="/" className="text-lg duration-500 hover:text-white">
+              Home
+            </Link>
+            <Link
+              href="/quiz"
+              className="text-lg duration-500 hover:text-white"
+            >
+              Quiz
+            </Link>
+            <Link
+              href="/blog"
+              className="text-lg duration-500 hover:text-white"
+            >
+              Blogs
+            </Link>
+            <Link href="/me" className="text-lg duration-500 hover:text-white">
+              Me
+            </Link>
+          </div>
+          {/* media navbar */}
           <div
             className={`duration-500 text-gray-400  fixed bg-[#0f0f1ec0] top-0 bottom-0   z-[1500] ${
               open ? "left-0 right-0" : "left-[-100%]"
