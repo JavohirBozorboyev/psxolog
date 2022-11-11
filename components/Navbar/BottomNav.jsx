@@ -3,12 +3,11 @@ import React from "react";
 import { useRouter } from "next/router";
 
 const BottomNav = () => {
-  const router = useRouter();
-  const active = router.asPath;
+  const active = useRouter().asPath;
   return (
     <div>
       <section className="block fixed inset-x-0 bottom-0 z-[1000] bg-slate-900 md:hidden shadow shadow-white">
-        <div className="flex justify-between py-3">
+        <div className="flex justify-between py-4">
           <Link
             href="/"
             className="w-full duration-500  flex flex-col justify-center items-center  "

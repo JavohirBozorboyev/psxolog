@@ -6,10 +6,10 @@ import LinkUi from "../../components/ui/LinkUi/LinkUi";
 
 const Header = () => {
   return (
-    <div className="bg-slate-900 py-8 text-white  flex items-center">
-      <div className="container m-auto px-3 sm:p-0 flex flex-col items-center justify-between   md:flex-row mt-20  ">
+    <div className=" bg-slate-900 py-8   flex items-center">
+      <div className="container m-auto px-3 sm:p-0 flex flex-col items-center justify-between   md:flex-row   ">
         <div className="w-full md:w-1/2 flex flex-col justify-between  items-start">
-          <span className=" text-6xl md:text-8xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-emerald-400 to-green-500 md:inline-block">
+          <span className=" text-7xl md:text-8xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-emerald-400 to-green-500 md:inline-block">
             {" "}
             Hi,
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-cyon-400 to-purple-300">
