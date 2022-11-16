@@ -104,10 +104,10 @@ const Navbar = () => {
                 className="absolute right-0 top-[50%] bg-slate-900 p-4 -mr-8 -mt-6 rounded-full"
               >
                 <svg
-                  clip-rule="evenodd"
-                  fill-rule="evenodd"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="2"
+                  clipRule="evenodd"
+                  fillRule="evenodd"
+                  strokeLinejoin="round"
+                  strokeMiterlimit="2"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   className="fill-white"

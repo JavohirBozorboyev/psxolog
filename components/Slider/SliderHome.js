@@ -37,74 +37,146 @@ const SliderHome = () => {
         >
           <div>
             <SwiperSlide>
-              <img
-                style={{ width: "400px" }}
-                src="https://swiperjs.com/demos/images/nature-3.jpg"
-                className="z-0"
-              />
-              <div className="px-2 absolute z-50 left-0 bottom-0 right-0 top-0 bg-[#0000008c] flex items-end">
-                <div>
-                  <Link
-                    href="/"
-                    className="text-sm duration-500 text-gray-300 mb-4 cursor-pointer  inline-block hover:text-white"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nam, libero!
-                  </Link>
+              <div className="p-2">
+                <img
+                  style={{ width: "400px" }}
+                  src="https://swiperjs.com/demos/images/nature-3.jpg"
+                  className="z-0 rounded-md"
+                />
+                <div className="p-2 flex flex-col">
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-xl font-bold duration-500 text-gray-900  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Hello World
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-sm duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nam, libero!
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="p-[6px] text-sm px-4 bg-slate-900 inline-block mt-3 rounded-md text-white"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                style={{ width: "400px" }}
-                src="https://swiperjs.com/demos/images/nature-4.jpg"
-                className="z-0"
-              />
-              <div className="px-2 absolute z-50 left-0 bottom-0 right-0 top-0 bg-[#0000008c] flex items-end">
-                <div>
-                  <Link
-                    href="/"
-                    className="text-sm duration-500 text-gray-300 mb-4 cursor-pointer  inline-block hover:text-white"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nam, libero!
-                  </Link>
+              <div className="p-2">
+                <img
+                  style={{ width: "400px" }}
+                  src="https://swiperjs.com/demos/images/nature-1.jpg"
+                  className="z-0 rounded-md"
+                />
+                <div className="p-2 flex flex-col">
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-xl font-bold duration-500 text-gray-900  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Hello World
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-sm duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nam, libero!
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="p-[6px] text-sm px-4 bg-slate-900 inline-block mt-3 rounded-md text-white"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                style={{ width: "400px" }}
-                src="https://swiperjs.com/demos/images/nature-5.jpg"
-                className="z-0"
-              />
-              <div className="px-2 absolute z-50 left-0 bottom-0 right-0 top-0 bg-[#0000008c] flex items-end">
-                <div>
-                  <Link
-                    href="/"
-                    className="text-sm duration-500 text-gray-300 mb-4 cursor-pointer  inline-block hover:text-white"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nam, libero!
-                  </Link>
+              <div className="p-2">
+                <img
+                  style={{ width: "400px" }}
+                  src="https://swiperjs.com/demos/images/nature-6.jpg"
+                  className="z-0 rounded-md"
+                />
+                <div className="p-2 flex flex-col">
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-xl font-bold duration-500 text-gray-900  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Hello World
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-sm duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nam, libero!
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="p-[6px] text-sm px-4 bg-slate-900 inline-block mt-3 rounded-md text-white"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                style={{ width: "400px" }}
-                src="https://swiperjs.com/demos/images/nature-6.jpg"
-                className="z-0"
-              />
-              <div className="px-2 absolute z-50 left-0 bottom-0 right-0 top-0 bg-[#0000008c] flex items-end">
-                <div>
-                  <Link
-                    href="/"
-                    className="text-sm duration-500 text-gray-300 mb-4 cursor-pointer  inline-block hover:text-white"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nam, libero!
-                  </Link>
+              <div className="p-2">
+                <img
+                  style={{ width: "400px" }}
+                  src="https://swiperjs.com/demos/images/nature-4.jpg"
+                  className="z-0 rounded-md"
+                />
+                <div className="p-2 flex flex-col">
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-xl font-bold duration-500 text-gray-900  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Hello World
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="text-sm duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nam, libero!
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/"
+                      className="p-[6px] text-sm px-4 bg-slate-900 inline-block mt-3 rounded-md text-white"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

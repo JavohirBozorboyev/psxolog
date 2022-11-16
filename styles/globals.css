@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #e6e6e6;
+  background-color: #f9f9f9;
 }
 
 a {
@@ -46,6 +46,11 @@ a {
   border-radius: 6px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 0 4px gray;
+  margin: 20px 0;
+}
+.swiper-slide:nth-child(odd) {
+  margin-top: 40px;
 }
 .swiper-slide .link {
   clip-path: polygon(

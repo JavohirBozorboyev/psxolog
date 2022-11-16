@@ -6,7 +6,7 @@ const BottomNav = () => {
   const active = useRouter().asPath;
   return (
     <div>
-      <section className="block fixed inset-x-0 bottom-0 z-[1000] bg-slate-900 md:hidden border-t-[2px]">
+      <section className="block fixed inset-x-0 bottom-0 z-[1000] bg-slate-900 md:hidden shadow-sm shadow-white">
         <div className="flex justify-between py-4">
           <Link
             href="/"
