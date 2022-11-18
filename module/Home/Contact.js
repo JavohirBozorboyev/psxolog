@@ -4,11 +4,11 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="container bg-white rounded-t-md mx-auto py-6 flex flex-col justify-center items-center text-center">
+      <div className="container px-3 md:px-0 bg-white rounded-t-md mx-auto py-6 flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl font-bold uppercase text-slate-900">
           My Contact
         </h1>
-        <p className="mt-4  text-lg w-full md:w-[60%]">
+        <p className="mt-4  text-sm md:text-lg w-full md:w-[60%]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rerum
           perferendis numquam sit quaerat ipsam labore veniam facilis nobis
         </p>

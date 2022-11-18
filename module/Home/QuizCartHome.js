@@ -4,12 +4,12 @@ import React from "react";
 const QuizCartHome = () => {
   return (
     <div>
-      <div className="container mx-auto py-20">
+      <div className="container mx-auto py-20 px-3 md:px-0">
         <div className="flex flex-col  items-center">
           <h1 className="text-slate-800 font-bold  text-4xl uppercase text-center  ">
             My Tests
           </h1>
-          <p className="text-slate-700 mt-4  text-lg   text-center md:w-1/2  ">
+          <p className="text-slate-700 mt-4  text-base md:text-lg   text-center md:w-1/2  ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Perspiciatis architecto corporis aut magni vel at, culpa ipsam nisi
             ducimus assumenda incidunt,
@@ -20,7 +20,7 @@ const QuizCartHome = () => {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Link
             href={"/"}
-            className="overflow-hidden rounded-2xl bg-gradient-to-tr from-slate-700 to-slate-500 p-4 lg:p-12"
+            className="overflow-hidden rounded-md bg-gradient-to-tr from-slate-700 to-slate-500 p-4 lg:p-12"
           >
             <div className="flex items-center text-blue-100">
               <p className="text-sm font-bold uppercase">Feature 1</p>
@@ -51,7 +51,7 @@ const QuizCartHome = () => {
           </Link>
           <Link
             href={"/"}
-            className="overflow-hidden rounded-2xl bg-gradient-to-tr from-slate-700 to-slate-500 p-4 lg:p-12"
+            className="overflow-hidden rounded-md bg-gradient-to-tr from-slate-700 to-slate-500 p-4 lg:p-12"
           >
             <div className="flex items-center text-blue-100">
               <p className="text-sm font-bold uppercase">Feature 1</p>

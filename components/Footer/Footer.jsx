@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <footer className="p-4 mb-[60px] md:mb-0 bg-slate-900  shadow md:px-6 md:py-8 ">
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className=" container mx-auto sm:flex sm:items-center sm:justify-between">
           <a
             href="#"
             target="_blank"
@@ -17,7 +17,7 @@ const Footer = () => {
               alt="Flowbite Logo"
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Intent
+              MCoder
             </span>
           </a>
           <ul className="flex flex-wrap items-center mb-6 sm:mb-0">
