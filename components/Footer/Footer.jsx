@@ -17,7 +17,7 @@ const Footer = () => {
               alt="Flowbite Logo"
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              MCoder
+              Intent
             </span>
           </a>
           <ul className="flex flex-wrap items-center mb-6 sm:mb-0">
