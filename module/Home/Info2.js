@@ -12,10 +12,10 @@ const Info2 = () => {
           backgroundPosition: "center",
         }}
       >
-        <h1 className="text-white text-4xl font-bold w-1/2 text-center">
+        <h1 className="text-white text-2xl md:text-2xl font-bold md:w-1/2 text-center">
           Bizning hizmatlarimmizdan foydalanganizdan hursandmiz
         </h1>
-        <p className="text-center mt-4 text-gray-50 text-xl">
+        <p className="text-center mt-4 text-gray-50 text-lg md:text-xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis
           ipsum mollitia consequuntur exercitationem asperiores, culpa hic
           obcaecati, voluptate illo dignissimos totam. Voluptate hic neque earum
