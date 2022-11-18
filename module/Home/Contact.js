@@ -15,10 +15,10 @@ const Contact = () => {
       </div>
       <section className="bg-white mb-6 rounded-b-md  px-3 md:px-2 container mx-auto  relative py-6 flex flex-wrap   justify-between ">
         <div className="w-full md:w-2/3 flex flex-wrap justify-between gap-10">
-          <div className="bg-slate-900 rounded-md p-4 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
+          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={"tel:+998991234567"}
-              className=" bg-slate-900  rounded-full p-4 duration-500 hover:scale-105"
+              className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,15 +32,15 @@ const Contact = () => {
             </Link>
             <Link
               href={"tel:+998993912505"}
-              className="text-white  hover:text-sky-500 inline-block  w-full p-4 text-center text-lg "
+              className="text-white  hover:text-sky-500 inline-block  w-full p-6 text-center text-lg "
             >
               +99 899 123 45 67
             </Link>
           </div>
-          <div className="bg-slate-900 rounded-md p-4 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
+          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={""}
-              className=" bg-slate-900  rounded-full p-4 duration-500 hover:scale-105"
+              className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,15 +54,15 @@ const Contact = () => {
             </Link>
             <Link
               href={""}
-              className="text-white  hover:text-sky-500 inline-block  w-full p-4 text-center text-lg "
+              className="text-white  hover:text-sky-500 inline-block  w-full p-6 text-center text-lg "
             >
               abs@gamil.com
             </Link>
           </div>
-          <div className="bg-slate-900 rounded-md p-4 py-8 flex justify-center flex-col items-center w-full ">
+          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full ">
             <Link
               href={""}
-              className=" bg-slate-900  rounded-full p-4 duration-500 hover:scale-105"
+              className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +74,12 @@ const Contact = () => {
                 <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
               </svg>
             </Link>
-            <p className="text-white   inline-block  w-full p-4 text-center text-lg ">
+            <p className="text-white   inline-block  w-full p-6 text-center text-lg ">
               Namangan, Uzbekistan
             </p>
           </div>
         </div>
-        <div className=" w-full md:w-[32%] mt-6 sm:mt-0 bg-slate-900 rounded-lg p-8 flex flex-col    relative z-10 shadow-md">
+        <div className=" w-full md:w-[32%] mt-6 sm:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded-lg p-8 flex flex-col    relative z-10 shadow-md">
           <h2 className="text-gray-100 text-lg mb-1 font-medium title-font">
             Feedback
           </h2>
@@ -87,7 +87,7 @@ const Contact = () => {
             Post-ironic portland shabby chic echo park, banjo fashion axe
           </p>
           <div className="relative mb-4">
-            <label className="leading-7 text-sm text-gray-300">Email</label>
+            <label className="leading-7 text-sm text-gray-200">Email</label>
             <input
               type="email"
               id="email"
@@ -96,17 +96,17 @@ const Contact = () => {
             />
           </div>
           <div className="relative mb-4">
-            <label className="leading-7 text-sm text-gray-300">Message</label>
+            <label className="leading-7 text-sm text-gray-200">Message</label>
             <textarea
               id="message"
               name="message"
               className="w-full bg-transparent rounded border border-gray-300 focus:border-white focus:ring-2 focus:ring-white h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out text-gray-200"
             ></textarea>
           </div>
-          <button className="text-white duration-500 bg-slate-500 border-0 py-2 px-6 focus:outline-none hover:bg-slate-600 rounded text-lg">
-            Button
+          <button className="text-slate-900 uppercase font-extrabold duration-500 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+            Submit
           </button>
-          <p className="text-xs text-gray-500 mt-3">
+          <p className="text-xs text-gray-100 mt-3">
             Chicharrones blog helvetica normcore iceland tousled brook viral
             artisan.
           </p>

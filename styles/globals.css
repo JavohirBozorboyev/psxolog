@@ -49,9 +49,7 @@ a {
   box-shadow: 0 0 4px gray;
   margin: 20px 0;
 }
-.swiper-slide:nth-child(odd) {
-  margin-top: 40px;
-}
+
 .swiper-slide .link {
   clip-path: polygon(
     11% 0,
