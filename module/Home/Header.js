@@ -2,6 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import Avatar from "./avatar.jpg";
 
 const Header = () => {
   return (
@@ -42,9 +44,11 @@ const Header = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 flex justify-end mt-8 md:mt-0">
-          <img
-            src="https://i.pinimg.com/originals/5a/3f/e5/5a3fe51372fceb7628c703b87c15ee1e.jpg"
-            alt=""
+          <Image
+            src={Avatar}
+            
+            placeholder="blur"
+            alt="Shifokor, psiholog, do'ktor"
             className="w-[500px] z-20 lg:mr-10  rounded-md"
           />
         </div>

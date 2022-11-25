@@ -8,8 +8,8 @@ const AppLayout = ({ children }) => {
   return (
     <div>
       <Head lang="en">
-        <title>Test Rejimida</title>
-        <meta name="description" content="psxolog, test," />
+        <title>Psxolog</title>
+        <meta name="description" content="psxolog, test, Blogs" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
