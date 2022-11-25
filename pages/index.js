@@ -22,9 +22,16 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    "https://psihologictest.pythonanywhere.com/admin-api/post/"
+    "https://psihologictest2.pythonanywhere.com/api/post/"
   );
   const posts = await res.json();
+
+  if (!res.ok) {
+    // If there is a server error, you might want to
+    // throw an error instead of returning so that the cache is not updated
+    // until the next successful request.
+    throw new Error(`Failed to fetch posts, received status ${res.status}`);
+  }
 
   return {
     props: {

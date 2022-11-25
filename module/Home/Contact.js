@@ -1,7 +1,57 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState, useRef } from "react";
 
 const Contact = () => {
+  const ism = useRef(null);
+  const yosh = useRef(null);
+  const massage = useRef(null);
+  const [errorM, setErrorM] = useState(false);
+  const [errorI, setErrorI] = useState(false);
+  const [errorY, setErrorY] = useState(false);
+
+  const handle = () => {
+    if (ism.current.value.length >= 2) {
+      setErrorI(false);
+    }
+    if (yosh.current.value.length >= 1) {
+      setErrorY(false);
+    }
+    if (massage.current.value.length > 20) {
+      setErrorM(false);
+    }
+    if (
+      massage.current.value.length > 20 &&
+      ism.current.value.length >= 2 &&
+      yosh.current.value.length > 1
+    ) {
+      // fetch("https://psihologictest2.pythonanywhere.com/admin-api/contact/", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     full_name: ism.current.value,
+      //     age: yosh.current.value,
+      //     body: massage.current.value,
+      //     read: false,
+      //   }),
+      // });
+      console.log(ism.current.value == "a");
+    } else {
+      if (massage.current.value.length < 20) {
+        setErrorM(true);
+      }
+      if (ism.current.value.length <= 2) {
+        setErrorI(true);
+      }
+      if (yosh.current.value.length <= 1) {
+        setErrorY(true);
+      }
+    }
+  };
+
+  // 3b05cdcf2904c5ab65658a83117ade216bf016c2
+
   return (
     <>
       <div className="container px-3 md:px-0 bg-white rounded-t-md mx-auto py-6 flex flex-col justify-center items-center text-center">
@@ -14,7 +64,7 @@ const Contact = () => {
         </p>
       </div>
       <section className="bg-white mb-6 rounded-b-md  px-3 md:px-2 container mx-auto  relative py-6 flex flex-wrap   justify-between ">
-        <div className="w-full md:w-2/3 flex flex-wrap justify-between gap-10">
+        <div className="w-full lg:w-2/3 flex flex-wrap justify-between gap-4">
           <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={"tel:+998991234567"}
@@ -79,7 +129,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <div className=" w-full md:w-[32%] mt-6 sm:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded-lg p-8 flex flex-col    relative z-10 shadow-md">
+        <div className=" w-full lg:w-[32%] mt-6 lg:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded-lg p-8 flex flex-col    relative z-10 shadow-md">
           <h2 className="text-gray-100 text-lg mb-1 font-medium title-font">
             Feedback
           </h2>
@@ -87,23 +137,62 @@ const Contact = () => {
             Post-ironic portland shabby chic echo park, banjo fashion axe
           </p>
           <div className="relative mb-4">
-            <label className="leading-7 text-sm text-gray-200">Email</label>
+            <label className="leading-7 text-sm text-gray-200">
+              Ism:{" "}
+              {errorI ? (
+                <p className="text-red-400">
+                  Iltimos Ismingizni to'liq kiriting.
+                </p>
+              ) : null}
+            </label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full bg-transparent rounded border border-gray-300 focus:border-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              ref={ism}
+              type="text"
+              className={`w-full bg-transparent rounded border ${
+                errorI ? "border-red-500" : "border-gray-300"
+              } text-base outline-none text-gray-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
             />
           </div>
           <div className="relative mb-4">
-            <label className="leading-7 text-sm text-gray-200">Message</label>
+            <label className="leading-7 text-sm text-gray-200">
+              Yosh:{" "}
+              {errorY ? (
+                <p className="text-red-400">
+                  Iltimos yoshingizni to'gri kiriting.
+                </p>
+              ) : null}
+            </label>
+            <input
+              ref={yosh}
+              type="number"
+              className={`w-full bg-transparent rounded border ${
+                errorY ? "border-red-500" : "border-gray-300"
+              } text-base outline-none text-gray-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
+            />
+          </div>
+          <div className="relative mb-4">
+            <label className="leading-7 text-sm text-gray-200">
+              Message{" "}
+              {errorM ? (
+                <p className="text-red-400">
+                  Eng Kamida 5 so'zdan iborat matin kiriting
+                </p>
+              ) : null}
+            </label>
             <textarea
+              ref={massage}
               id="message"
               name="message"
-              className="w-full bg-transparent rounded border border-gray-300 focus:border-white focus:ring-2 focus:ring-white h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out text-gray-200"
+              className={`w-full bg-transparent rounded border ${
+                errorM ? "border-red-500" : "border-gray-300"
+              } h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out text-gray-200 `}
             ></textarea>
           </div>
-          <button className="text-slate-900 uppercase font-extrabold duration-500 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+          <button
+            onClick={handle}
+            type="submit"
+            className="text-slate-900 uppercase font-extrabold duration-500 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
+          >
             Submit
           </button>
           <p className="text-xs text-gray-100 mt-3">

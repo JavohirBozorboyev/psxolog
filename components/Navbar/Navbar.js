@@ -139,7 +139,7 @@ const Navbar = () => {
               Me
             </Link>
           </div>
-          <div className="flex gap-8 mt-6">
+          <div className="flex gap-4 flex-wrap mt-6">
             <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

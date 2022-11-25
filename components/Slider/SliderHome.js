@@ -49,17 +49,17 @@ const SliderHome = ({ posts }) => {
                     <div className="p-2 flex flex-col">
                       <div>
                         <h1 className="text-xl font-bold duration-500 text-gray-900  cursor-pointer  inline-block hover:text-gray-800">
-                          {item.title}
+                          {item.title.slice(0, 30)}...
                         </h1>
                       </div>
                       <div>
                         <p className="text-sm duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800">
-                          {item.body}
+                          {item.body.slice(0, 80)}...
                         </p>
                       </div>
                       <div>
                         <Link
-                          href={`/blog/${item.id}`}
+                          href={`/blog/${item.slug}`}
                           className="p-[6px] text-sm px-4 bg-slate-900 inline-block mt-3 rounded-md text-white"
                         >
                           Read More
