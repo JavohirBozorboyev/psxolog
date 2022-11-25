@@ -37,7 +37,7 @@ const SliderHome = ({ posts }) => {
           className="mySwiper"
         >
           <div>
-            {posts.map((item) => {
+            {posts.slice(-5).map((item) => {
               return (
                 <SwiperSlide key={item.id}>
                   <div className="p-2">

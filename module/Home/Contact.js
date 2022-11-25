@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const Contact = () => {
   const ism = useRef(null);
@@ -8,6 +9,7 @@ const Contact = () => {
   const [errorM, setErrorM] = useState(false);
   const [errorI, setErrorI] = useState(false);
   const [errorY, setErrorY] = useState(false);
+  const router = useRouter();
 
   const handle = () => {
     if (ism.current.value.length >= 2) {
@@ -24,19 +26,19 @@ const Contact = () => {
       ism.current.value.length >= 2 &&
       yosh.current.value.length > 1
     ) {
-      // fetch("https://psihologictest2.pythonanywhere.com/admin-api/contact/", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     full_name: ism.current.value,
-      //     age: yosh.current.value,
-      //     body: massage.current.value,
-      //     read: false,
-      //   }),
-      // });
-      console.log(ism.current.value == "a");
+      fetch("https://psihologictest2.pythonanywhere.com/admin-api/contact/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          full_name: ism.current.value,
+          age: yosh.current.value,
+          body: massage.current.value,
+          read: false,
+        }),
+      });
+      router.refresh();
     } else {
       if (massage.current.value.length < 20) {
         setErrorM(true);
