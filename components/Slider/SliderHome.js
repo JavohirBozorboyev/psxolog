@@ -45,6 +45,7 @@ const SliderHome = ({ posts }) => {
                       style={{ width: "400px" }}
                       src={item.photo}
                       className="z-0 rounded-md"
+                      alt={item.title}
                     />
                     <div className="p-2 flex flex-col">
                       <div>
