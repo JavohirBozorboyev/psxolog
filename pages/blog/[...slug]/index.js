@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-const index = ({ data }) => {
+const BlogSlug = ({ data }) => {
   console.log(data);
   return (
     <>
@@ -43,7 +43,7 @@ const index = ({ data }) => {
   );
 };
 
-export default index;
+export default BlogSlug;
 
 export async function getServerSideProps({ params }) {
   const res = await fetch(
