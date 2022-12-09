@@ -1,7 +1,14 @@
 import React from "react";
 
+import HeaderMe from "../../module/me/HeaderMe";
+
 const index = () => {
-  return <div>index</div>;
+  return (
+    <>
+      {" "}
+      <HeaderMe />
+    </>
+  );
 };
 
 export default index;

@@ -3,8 +3,11 @@ import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import BottomNav from "../components/Navbar/BottomNav";
+import { useRouter } from "next/router";
 
 const AppLayout = ({ children }) => {
+  const router = useRouter();
+
   return (
     <div>
       <Head lang="en">
@@ -13,10 +16,10 @@ const AppLayout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar />
+        {router.route !== "/login" ? <Navbar /> : null}
         <div>{children}</div>
-        <BottomNav />
-        <Footer />
+        {router.route !== "/login" ? <BottomNav /> : null}
+        {router.route !== "/login" ? <Footer /> : null}
       </main>
     </div>
   );

@@ -8,16 +8,17 @@ import Avatar from "./avatar.jpg";
 const Header = () => {
   return (
     <div className="  py-8   flex items-center">
-      <div className="container relative m-auto px-3 sm:p-0 flex flex-col items-center justify-between   md:flex-row   ">
+      <div className="container relative m-auto px-3 sm:px-2 md:p-0 flex flex-col items-center justify-between   md:flex-row   ">
         <div className="w-full md:w-1/2 flex flex-col justify-between  items-start">
-          <span className=" text-7xl md:text-8xl font-bold mt-2 text-slate-900">
+          <span className=" text-4xl sm:text-6xl uppercase lg:text-6xl xl:text-7xl font-bold mt-2 text-slate-900">
             {" "}
-            Hi,
-            <span className="text-slate-500"> World</span>{" "}
+            Deddahanov Dilshod
+            <span className="text-slate-500"> Toxrovich</span>{" "}
           </span>
           <p className="mt-6 text-slate-700 text-lg lg:w-8/12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ab rem
-            alias enim optio aperiam recusandae neque impedit porro. Adipisci
+            {
+              "Vrach Tibbiy psixolog, psixoterapevt. 8-yillik ish tajribasiga ega  va 500 dan ortiq bemorlarga tibbiy hizmat ko'rsatgan."
+            }
           </p>
           <div className="flex gap-5 flex-wrap mt-8">
             <Link
@@ -27,7 +28,7 @@ const Header = () => {
               Start Test
             </Link>
             <Link
-              href="/"
+              href="https://youtube.com/channel/UCkB7jvRP4czJrAp7oSGPk2g"
               className="px-6 py-2 font-bold text-slate-900 flex items-center"
             >
               <svg
@@ -46,7 +47,6 @@ const Header = () => {
         <div className="w-full md:w-1/2 flex justify-end mt-8 md:mt-0">
           <Image
             src={Avatar}
-            
             placeholder="blur"
             alt="Shifokor, psiholog, do'ktor"
             className="w-[500px] z-20 lg:mr-10  rounded-md"

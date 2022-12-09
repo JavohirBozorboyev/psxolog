@@ -1,8 +1,10 @@
 import React from "react";
 import BlogCard from "../../module/Blog/BlogCard";
 import BlogHeader from "../../module/Blog/BlogHeader";
+import useSWR from "swr";
 
 const Blog = ({ posts }) => {
+  const {data, error} = useSWR()
   return (
     <div>
       <BlogHeader />

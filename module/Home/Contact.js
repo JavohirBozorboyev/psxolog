@@ -1,6 +1,9 @@
 import Link from "next/link";
 import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import axios from "axios";
+import { showNotification } from "@mantine/notifications";
+import { Alert } from "@mantine/core";
 
 const Contact = () => {
   const ism = useRef(null);
@@ -26,19 +29,64 @@ const Contact = () => {
       ism.current.value.length >= 2 &&
       yosh.current.value.length > 1
     ) {
-      fetch("https://psihologictest2.pythonanywhere.com/admin-api/contact/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      axios
+        .post("https://psihologictest2.pythonanywhere.com/admin-api/contact/", {
           full_name: ism.current.value,
           age: yosh.current.value,
           body: massage.current.value,
           read: false,
-        }),
-      });
-      router.refresh();
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            showNotification({
+              title: "Tabriklaymiz",
+              message: "Malumotlar jo'natildi.",
+              styles: (theme) => ({
+                root: {
+                  backgroundColor: theme.colors.blue[6],
+                  borderColor: theme.colors.blue[6],
+                  zIndex: "2000!important",
+                  marginBottom: "60px",
+
+                  "&::before": { backgroundColor: theme.white },
+                },
+
+                title: { color: theme.white },
+                description: { color: theme.white },
+                closeButton: {
+                  color: theme.white,
+                  "&:hover": { backgroundColor: theme.colors.blue[7] },
+                },
+              }),
+            });
+            ism.current.value = null;
+            yosh.current.value = null;
+            massage.current.value = null;
+          }
+        })
+        .catch((error) => {
+          showNotification({
+            title: "Kechirasiz",
+            message: "Malumotlar jo'natilmadi.",
+            styles: (theme) => ({
+              root: {
+                backgroundColor: theme.colors.red[6],
+                borderColor: theme.colors.red[6],
+                zIndex: "2000!important",
+                marginBottom: "60px",
+
+                "&::before": { backgroundColor: theme.white },
+              },
+
+              title: { color: theme.white },
+              description: { color: theme.white },
+              closeButton: {
+                color: theme.white,
+                "&:hover": { backgroundColor: theme.colors.red[7] },
+              },
+            }),
+          });
+        });
     } else {
       if (massage.current.value.length < 20) {
         setErrorM(true);
@@ -69,7 +117,7 @@ const Contact = () => {
         <div className="w-full lg:w-2/3 flex flex-wrap justify-between gap-4">
           <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
-              href={"tel:+998991234567"}
+              href={"tel:+998902750030"}
               className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
             >
               <svg
@@ -86,7 +134,7 @@ const Contact = () => {
               href={"tel:+998993912505"}
               className="text-white  hover:text-sky-500 inline-block  w-full p-6 text-center text-lg "
             >
-              +99 899 123 45 67
+              +99 890 275 00 30
             </Link>
           </div>
           <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
@@ -108,7 +156,7 @@ const Contact = () => {
               href={""}
               className="text-white  hover:text-sky-500 inline-block  w-full p-6 text-center text-lg "
             >
-              abs@gamil.com
+              dedakhanovdilshodbek@gmail.com
             </Link>
           </div>
           <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full ">
@@ -132,18 +180,12 @@ const Contact = () => {
           </div>
         </div>
         <div className=" w-full lg:w-[32%] mt-6 lg:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded-lg p-8 flex flex-col    relative z-10 shadow-md">
-          <h2 className="text-gray-100 text-lg mb-1 font-medium title-font">
-            Feedback
-          </h2>
-          <p className="leading-relaxed mb-5 text-gray-300">
-            Post-ironic portland shabby chic echo park, banjo fashion axe
-          </p>
           <div className="relative mb-4">
             <label className="leading-7 text-sm text-gray-200">
               Ism:{" "}
               {errorI ? (
                 <p className="text-red-400">
-                  Iltimos Ismingizni to'liq kiriting.
+                  {"Iltimos Ismingizni to'liq kiriting."}
                 </p>
               ) : null}
             </label>
@@ -160,7 +202,7 @@ const Contact = () => {
               Yosh:{" "}
               {errorY ? (
                 <p className="text-red-400">
-                  Iltimos yoshingizni to'gri kiriting.
+                  {"Iltimos yoshingizni to'gri kiriting."}
                 </p>
               ) : null}
             </label>
@@ -177,7 +219,7 @@ const Contact = () => {
               Message{" "}
               {errorM ? (
                 <p className="text-red-400">
-                  Eng Kamida 5 so'zdan iborat matin kiriting
+                  {"Eng Kamida 5 so'zdan iborat matin kiriting"}
                 </p>
               ) : null}
             </label>
@@ -197,10 +239,6 @@ const Contact = () => {
           >
             Submit
           </button>
-          <p className="text-xs text-gray-100 mt-3">
-            Chicharrones blog helvetica normcore iceland tousled brook viral
-            artisan.
-          </p>
         </div>
       </section>
     </>

@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 const BlogCard = ({ posts }) => {
-  console.log(posts);
   return (
     <div className="py-8">
       <div
