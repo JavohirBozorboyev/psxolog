@@ -5,6 +5,7 @@ import Contact from "../module/Home/Contact";
 import Info2 from "../module/Home/Info2";
 import QuizCartHome from "../module/Home/QuizCartHome";
 import Head from "next/head";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home({ posts }) {
   return (
@@ -17,14 +18,19 @@ export default function Home({ posts }) {
           content="psxolog, doctor "
           key="psxolog, doctor"
         />
+        <meta name="google" content="notranslate" />
       </Head>
       <main>
-        <Header />
-        <Info />
-        <QuizCartHome />
-        <Blog posts={posts} />
-        <Info2 />
-        <Contact />
+        <AnimatePresence>
+          <div>
+            <Header />
+            <Info />
+            <QuizCartHome />
+            <Blog posts={posts} />
+            <Info2 />
+            <Contact />
+          </div>
+        </AnimatePresence>
       </main>
     </>
   );

@@ -1,15 +1,26 @@
 import React from "react";
 import BlogCard from "../../module/Blog/BlogCard";
 import BlogHeader from "../../module/Blog/BlogHeader";
-import useSWR from "swr";
+import Head from "next/head";
 
 const Blog = ({ posts }) => {
-  const {data, error} = useSWR()
   return (
-    <div>
-      <BlogHeader />
-      <BlogCard posts={posts} />
-    </div>
+    <>
+      <Head>
+        <title>Psxolog || Blogs</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="og:title"
+          content="psxolog, doctor Blogs  "
+          key="psxolog, doctor"
+        />
+        <meta name="google" content="notranslate" />
+      </Head>
+      <main>
+        <BlogHeader />
+        <BlogCard posts={posts} />
+      </main>
+    </>
   );
 };
 

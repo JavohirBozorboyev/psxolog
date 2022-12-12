@@ -2,6 +2,32 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const easing = [0.6, -0.5, 0.01, 0.99];
+
+const FadeInUPNav = {
+  initial: {
+    y: -120,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -9,8 +35,11 @@ const Navbar = () => {
     setOpen(!open);
   };
   return (
-    <>
-      <nav className="bg-slate-900 shadow border-b-[1px]">
+    <motion.div initial="initial" animate="animate">
+      <motion.nav
+        variants={FadeInUPNav}
+        className="bg-slate-900 shadow border-b-[1px]"
+      >
         <div className="container mx-auto py-4 px-4 lg:px-0 flex items-center  justify-between ">
           <div className="flex items-center justify-between w-full md:w-1/3 ">
             <Link href="/" className=" text-2xl uppercase font-bold text-white">
@@ -97,7 +126,7 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-      </nav>
+      </motion.nav>
       <div
         className={`duration-500 text-gray-400  fixed bg-[#0f0f1ec0] top-0 bottom-0   z-[1500] ${
           open ? "left-0 right-0" : "left-[-100%]"
@@ -212,7 +241,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

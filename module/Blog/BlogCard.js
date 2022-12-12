@@ -1,45 +1,80 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const easing = [0.6, -0.5, 0.01, 0.99];
+
+const FadeInUP = {
+  initial: { y: -60, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: easing,
+    },
+  },
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
 
 const BlogCard = ({ posts }) => {
   return (
-    <div className="py-8">
-      <div
+    <motion.div initial="initial" animate="animate" className="py-8">
+      <motion.div
+        variants={stagger}
         id="BlogCon"
         className="container mx-auto px-3 md:px-0 flex flex-col gap-16"
       >
         {posts.map((item) => {
           return (
-            <div
+            <motion.div
+              variants={stagger}
               key={item.id}
               className="cardBlog bg-white shadow-xl rounded-md p-3 flex justify-around flex-col items-center md:flex-row gap-4 "
             >
-              <div className="w-full md:w-1/2 left">
+              <motion.div variants={FadeInUP} className="w-full md:w-1/2 left">
                 <img
                   src={item.photo}
                   alt={item.title}
                   className="w-full lg:w-[400px] h-[300px] lg:h-[400px] xl:w-full object-cover  rounded-md overflow-hidden -mt-10"
                 />
-              </div>
+              </motion.div>
               <div className="w-full md:w-1/2 ">
-                <h1 className="text-xl md:text-2xl">
+                <motion.h1 variants={FadeInUP} className="text-xl md:text-2xl">
                   {item.title.slice(0, 80)}
-                </h1>
-                <p className="mt-4 text-sm md:text-base">
-                  {item.body.slice(0, 200)}
-                </p>
-                <Link
-                  href={`/blog/${item.slug}`}
-                  className="p-2 px-4 inline-block bg-slate-700 rounded-md text-white mt-4"
+                </motion.h1>
+                <motion.p
+                  variants={FadeInUP}
+                  className="mt-4 text-sm md:text-base"
                 >
-                  Read More
-                </Link>
+                  {item.body.slice(0, 200)}
+                </motion.p>
+                <motion.div
+                  variants={FadeInUP}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1 }}
+                  className=" inline-block"
+                >
+                  <Link
+                    href={`/blog/${item.slug}`}
+                    className="p-2 px-4 inline-block bg-slate-700 rounded-md text-white mt-4"
+                  >
+                    Read More
+                  </Link>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -12,7 +12,25 @@ const AppLayout = ({ children }) => {
     <div>
       <Head lang="en">
         <title>Psxolog</title>
-        <meta name="description" content="psxolog, test, Blogs" />
+        <meta
+          name="description"
+          content="psxolog, test, Blogs, Quzi,  Dedahanov Dilshod Tohirovich,"
+        />
+        <meta name="google" content="notranslate" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Psxolog" />
+
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+        <meta name="msapplication-tap-highlight" content="yes" />
+        <meta name="author" content="Bozorboyev Javohir" />
+        <meta name="copyright" content="Dedahanov Dilshod" />
+
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
