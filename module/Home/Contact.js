@@ -104,16 +104,16 @@ const Contact = () => {
 
   return (
     <>
-      <div className="container px-3 md:px-0 bg-white rounded-t-md mx-auto py-6 flex flex-col justify-center items-center text-center">
-        <h1 className="text-4xl font-bold uppercase text-slate-900">
+      <div className="container px-3 md:px-0   mx-auto py-16 flex flex-col justify-center items-center text-center">
+        <h1 className="text-4xl titleText font-bold uppercase text-slate-900">
           My Contact
         </h1>
-        <p className="mt-4  text-sm md:text-lg w-full md:w-[60%]">
+        <p className="mt-4 secondText text-md md:text-lg w-full md:w-[60%]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rerum
           perferendis numquam sit quaerat ipsam labore veniam facilis nobis
         </p>
       </div>
-      <section className="bg-white mb-6 rounded-b-md  px-3 md:px-2 container mx-auto  relative py-6 flex flex-wrap   justify-between ">
+      <section className=" mb-6 rounded-b-md   container mx-auto  relative py-6 flex flex-wrap   justify-between ">
         <div className="w-full lg:w-2/3 flex flex-wrap justify-between gap-4">
           <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
@@ -122,8 +122,8 @@ const Contact = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
+                width="48"
+                height="48"
                 viewBox="0 0 24 24"
                 className="fill-white"
               >
@@ -132,20 +132,20 @@ const Contact = () => {
             </Link>
             <Link
               href={"tel:+998993912505"}
-              className="text-white  hover:text-sky-500 inline-block  w-full p-6 text-center text-lg "
+              className="text-white titleText  hover:text-sky-500 inline-block  w-full p-6 text-center  "
             >
               +99 890 275 00 30
             </Link>
           </div>
           <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
-              href={""}
+              href={"https://dedakhanovdilshodbek@gmail.com"}
               className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
+                width="48"
+                height="48"
                 viewBox="0 0 24 24"
                 className="fill-white hover:scale-105 duration-500"
               >
@@ -153,8 +153,8 @@ const Contact = () => {
               </svg>
             </Link>
             <Link
-              href={""}
-              className="text-white  hover:text-sky-500 inline-block  w-full p-6 text-center text-lg "
+              href={"https://dedakhanovdilshodbek@gmail.com"}
+              className="text-white titleText hover:text-sky-500  w-full p-6 text-center  "
             >
               dedakhanovdilshodbek@gmail.com
             </Link>
@@ -174,14 +174,14 @@ const Contact = () => {
                 <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
               </svg>
             </Link>
-            <p className="text-white   inline-block  w-full p-6 text-center text-lg ">
+            <p className="text-white titleText   inline-block  w-full p-6 text-center text-lg ">
               Namangan, Uzbekistan
             </p>
           </div>
         </div>
         <div className=" w-full lg:w-[32%] mt-6 lg:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded-lg p-8 flex flex-col    relative z-10 shadow-md">
           <div className="relative mb-4">
-            <label className="leading-7 text-sm text-gray-200">
+            <label className="leading-7 titleText text-sm text-gray-200">
               Ism:{" "}
               {errorI ? (
                 <p className="text-red-400">
@@ -198,7 +198,7 @@ const Contact = () => {
             />
           </div>
           <div className="relative mb-4">
-            <label className="leading-7 text-sm text-gray-200">
+            <label className="leading-7 titleText text-sm text-gray-200">
               Yosh:{" "}
               {errorY ? (
                 <p className="text-red-400">
@@ -215,7 +215,7 @@ const Contact = () => {
             />
           </div>
           <div className="relative mb-4">
-            <label className="leading-7 text-sm text-gray-200">
+            <label className="leading-7 titleText text-sm text-gray-200">
               Message{" "}
               {errorM ? (
                 <p className="text-red-400">
@@ -235,7 +235,7 @@ const Contact = () => {
           <button
             onClick={handle}
             type="submit"
-            className="text-slate-900 uppercase font-extrabold duration-500 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
+            className="text-slate-900 titleText uppercase font-extrabold duration-500 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
           >
             Submit
           </button>

@@ -39,14 +39,14 @@ const Header = () => {
         animate="animate"
         className="  py-8   flex items-center"
       >
-        <div className="container relative m-auto px-3 sm:px-2 md:p-0 flex flex-col items-center justify-between   md:flex-row   ">
+        <div className="container relative m-auto px-3 sm:px-3 lg:p-0 flex flex-col items-center justify-between   md:flex-row   ">
           <motion.div
             variants={stagger}
             className="w-full md:w-1/2 flex flex-col justify-between  items-start"
           >
             <motion.div
               variants={FadeInUP}
-              className=" text-4xl sm:text-6xl uppercase lg:text-6xl xl:text-7xl font-bold mt-2 text-slate-900"
+              className=" titleText text-4xl sm:text-5xl uppercase lg:text-6xl xl:text-6xl font-e mt-2 text-slate-900"
             >
               {" "}
               Deddahanov Dilshod
@@ -57,7 +57,7 @@ const Header = () => {
             </motion.div>
             <motion.p
               variants={FadeInUP}
-              className="mt-6 text-slate-700 text-lg lg:w-8/12"
+              className="mt-6 font-[600] secondText text-slate-700 text-lg lg:w-8/12"
             >
               {
                 "Vrach Tibbiy psixolog, psixoterapevt. 8-yillik ish tajribasiga ega  va 500 dan ortiq bemorlarga tibbiy hizmat ko'rsatgan."
@@ -69,7 +69,7 @@ const Header = () => {
             >
               <Link
                 href="/"
-                className="px-6 py-2 font-bold bg-slate-900 rounded-md text-white capitalize text-lg border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
+                className="px-6 titleText  uppercase py-2 font-bold bg-slate-900 rounded-sm text-white  border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
               >
                 Start Test
               </Link>
@@ -79,14 +79,14 @@ const Header = () => {
               >
                 <Link
                   href="https://youtube.com/channel/UCkB7jvRP4czJrAp7oSGPk2g"
-                  className="px-6 py-2 font-bold text-slate-900 flex items-center"
+                  className="px-6 titleText py-2 font-bold text-slate-600 flex items-center  ml-16 sm:ml-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="28"
+                    height="28"
                     viewBox="0 0 24 24"
-                    className="mr-2 fill-slate-900"
+                    className="mr-2 fill-slate-600 animate-pulse"
                   >
                     <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
                   </svg>

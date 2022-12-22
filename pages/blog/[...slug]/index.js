@@ -55,13 +55,13 @@ const BlogSlug = ({ data }) => {
           <div className="w-full md:w-1/2  overflow-auto ">
             <motion.h1
               variants={FadeInUP}
-              className="text-slate-700 font-bold text-2xl lg:text-4xl"
+              className="text-slate-700 titleText font-bold text-2xl lg:text-4xl"
             >
               {data.title}
             </motion.h1>
             <motion.p
               variants={FadeInUP}
-              className="mt-4 text-slate-600 md:text-lg"
+              className="mt-4 secondText text-slate-600 md:text-lg"
             >
               {data.body}
             </motion.p>

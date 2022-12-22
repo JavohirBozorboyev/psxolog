@@ -3,6 +3,22 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+
+const NavLink = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "Quiz",
+    url: "/quiz",
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+  },
+];
 
 const easing = [0.6, -0.5, 0.01, 0.99];
 
@@ -31,6 +47,7 @@ const stagger = {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   const handler = () => {
     setOpen(!open);
   };
@@ -42,8 +59,11 @@ const Navbar = () => {
       >
         <div className="container mx-auto py-4 px-4 lg:px-0 flex items-center  justify-between ">
           <div className="flex items-center justify-between w-full md:w-1/3 ">
-            <Link href="/" className=" text-2xl uppercase font-bold text-white">
-              Brand Name
+            <Link
+              href="/"
+              className=" titleText text-2xl uppercase font-bold text-white"
+            >
+              Dedahanov
             </Link>
             <div className="md:hidden" onClick={handler}>
               <svg
@@ -65,24 +85,19 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:flex text-gray-400 justify-center  gap-4 md:w-1/3">
-            <Link href="/" className="text-lg duration-500 hover:text-white">
-              Home
-            </Link>
-            <Link
-              href="/quiz"
-              className="text-lg duration-500 hover:text-white"
-            >
-              Quiz
-            </Link>
-            <Link
-              href="/blog"
-              className="text-lg duration-500 hover:text-white"
-            >
-              Blogs
-            </Link>
-            <Link href="/me" className="text-lg duration-500 hover:text-white">
-              Me
-            </Link>
+            {NavLink.map((link, index) => {
+              return (
+                <Link
+                  key={index}
+                  href={link.url}
+                  className={`text-lg secondText duration-500 hover:text-white ${
+                    router.route === link.url ? "text-white" : null
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
           <div className="hidden  md:flex justify-end items-center gap-4 md:w-1/3 ">
             <a href="">
@@ -134,39 +149,24 @@ const Navbar = () => {
       >
         <div className="duration-500 bg-slate-900 w-[70%] sm:w-[50%]  h-full p-4 flex flex-col justify-between relative ">
           <div>
-            <Link href="/" className=" text-2xl uppercase font-bold text-white">
+            <Link href="/" className=" text-2xl titleText uppercase font-bold text-white">
               Brand Name
             </Link>
           </div>
           <div className="flex flex-col gap-4 duration-500">
-            <Link
-              href="/"
-              className="text-2xl duration-500 hover:text-white"
-              onClick={handler}
-            >
-              Home
-            </Link>
-            <Link
-              href="/quiz"
-              className="text-2xl duration-500 hover:text-white"
-              onClick={handler}
-            >
-              Quiz
-            </Link>
-            <Link
-              href="/blog"
-              className="text-2xl duration-500 hover:text-white"
-              onClick={handler}
-            >
-              Blogs
-            </Link>
-            <Link
-              href="/me"
-              className="text-2xl duration-500 hover:text-white"
-              onClick={handler}
-            >
-              Me
-            </Link>
+            {NavLink.map((link, index) => {
+              return (
+                <Link
+                  key={index}
+                  href={link.url}
+                  className={`text-lg secondText duration-500 hover:text-white ${
+                    router.route === link.url ? "text-white" : null
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
           <div className="flex gap-4 flex-wrap mt-6">
             <a href="">
