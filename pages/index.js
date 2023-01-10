@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../module/Home/Header";
 import Info from "../module/Home/Info";
 import Blog from "../module/Home/Blog";
@@ -6,8 +7,17 @@ import Info2 from "../module/Home/Info2";
 import QuizCartHome from "../module/Home/QuizCartHome";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
+import useSWR from "swr";
+import Loading from "../components/Loader/Loading";
+import Offline from "../components/Loader/Offline";
 
-export default function Home({ posts }) {
+export default function Home() {
+  const { data: posts, error } = useSWR("/api/post/");
+  const { data: quizCategory } = useSWR("/api/category/");
+
+  if (error) {
+    return <Offline />;
+  }
   return (
     <>
       <Head>
@@ -37,8 +47,12 @@ export default function Home({ posts }) {
                 </p>
               </div>
             </div>
-            <QuizCartHome />
-            <Blog posts={posts} />
+            {!quizCategory ? (
+              <Loading />
+            ) : (
+              <QuizCartHome quizCategory={quizCategory} />
+            )}
+            {!posts ? <Loading /> : <Blog posts={posts} />}
             <Info2 />
             <Contact />
           </div>
@@ -46,25 +60,4 @@ export default function Home({ posts }) {
       </main>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch(
-    "https://psihologictest2.pythonanywhere.com/api/post/"
-  );
-  const posts = await res.json();
-
-  if (!res.ok) {
-    // If there is a server error, you might want to
-    // throw an error instead of returning so that the cache is not updated
-    // until the next successful request.
-    throw new Error(`Failed to fetch posts, received status ${res.status}`);
-  }
-
-  return {
-    props: {
-      posts,
-    },
-    revalidate: 1,
-  };
 }

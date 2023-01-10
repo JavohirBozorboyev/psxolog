@@ -54,7 +54,7 @@ const SliderHome = ({ posts }) => {
                         </h1>
                       </div>
                       <div>
-                        <p className="text-sm secondText my-2 duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800">
+                        <p className="text-sm secondText font-[500!important] my-2 duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800">
                           {item.body.slice(0, 80)}...
                         </p>
                       </div>

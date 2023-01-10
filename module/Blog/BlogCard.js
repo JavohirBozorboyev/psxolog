@@ -47,12 +47,15 @@ const BlogCard = ({ posts }) => {
                 />
               </motion.div>
               <div className="w-full md:w-1/2 ">
-                <motion.h1 variants={FadeInUP} className="text-xl titleText md:text-2xl">
+                <motion.h1
+                  variants={FadeInUP}
+                  className="text-xl titleText md:text-2xl"
+                >
                   {item.title.slice(0, 80)}
                 </motion.h1>
                 <motion.p
                   variants={FadeInUP}
-                  className="mt-4 secondText text-sm md:text-base"
+                  className="mt-4 secondText font-[500!important] text-sm md:text-base"
                 >
                   {item.body.slice(0, 200)}
                 </motion.p>

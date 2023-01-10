@@ -2,8 +2,12 @@ import React from "react";
 import BlogCard from "../../module/Blog/BlogCard";
 import BlogHeader from "../../module/Blog/BlogHeader";
 import Head from "next/head";
+import useSWR from "swr";
+import Loading from "../../components/Loader/Loading";
 
-const Blog = ({ posts }) => {
+const Blog = () => {
+  const { data: posts, error } = useSWR(`/api/post/`);
+
   return (
     <>
       <Head>
@@ -18,24 +22,10 @@ const Blog = ({ posts }) => {
       </Head>
       <main>
         <BlogHeader />
-        <BlogCard posts={posts} />
+        {!posts ? <Loading /> : <BlogCard posts={posts} />}
       </main>
     </>
   );
 };
 
 export default Blog;
-
-export async function getStaticProps() {
-  const res = await fetch(
-    "https://psihologictest2.pythonanywhere.com/api/post/"
-  );
-  const posts = await res.json();
-
-  return {
-    props: {
-      posts,
-    },
-    revalidate: 1,
-  };
-}

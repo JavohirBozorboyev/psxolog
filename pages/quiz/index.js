@@ -1,13 +1,22 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import Head from "next/head";
 import Question from "../../components/Question/Question";
 import QuizCartHome from "../../module/Home/QuizCartHome";
+import useSWR from "swr";
+import Loading from "../../components/Loader/Loading";
+import Offline from "../../components/Loader/Offline";
 
 const index = () => {
+  const { data: quizCategory, error } = useSWR(`/api/category/`);
+
+  if (error) {
+    return <Offline />;
+  }
   return (
     <div>
       <Head>
-        <title>Psxolog | Quiz Page</title>
+        <title>Psxolog | Quiz</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"
@@ -30,7 +39,13 @@ const index = () => {
             </p>
           </div>
         </div>
-        <QuizCartHome />
+        <div className="pb-10">
+          {!quizCategory ? (
+            <Loading />
+          ) : (
+            <QuizCartHome quizCategory={quizCategory} />
+          )}
+        </div>
       </main>
     </div>
   );

@@ -137,7 +137,7 @@ const Contact = () => {
               +99 890 275 00 30
             </Link>
           </div>
-          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
+          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-2 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={"https://dedakhanovdilshodbek@gmail.com"}
               className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
@@ -154,7 +154,7 @@ const Contact = () => {
             </Link>
             <Link
               href={"https://dedakhanovdilshodbek@gmail.com"}
-              className="text-white titleText hover:text-sky-500  w-full p-6 text-center  "
+              className="text-white titleText  hover:text-sky-500  w-full  overflow-hidden text-center  "
             >
               dedakhanovdilshodbek@gmail.com
             </Link>
