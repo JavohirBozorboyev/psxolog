@@ -35,7 +35,7 @@ const BottomNav = () => {
           </Link>
           <Link
             href="/blog"
-            className=" duration-500  flex flex-col justify-center items-center  "
+            className=" duration-500  flex flex-col p-2 justify-center items-center  "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const BottomNav = () => {
           </Link>
           <Link
             href="/quiz"
-            className=" duration-500  flex flex-col justify-center items-center  "
+            className=" duration-500  p-2 flex flex-col justify-center items-center  "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

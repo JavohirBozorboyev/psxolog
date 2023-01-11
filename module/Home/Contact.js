@@ -115,10 +115,10 @@ const Contact = () => {
       </div>
       <section className=" mb-6 rounded-b-md    container mx-auto  relative py-6 flex flex-wrap   justify-between ">
         <div className="w-full lg:w-2/3 flex flex-wrap justify-between gap-4">
-          <div className="bg-gradient-to-br mx-1 from-slate-700 to-slate-500 rounded p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
+          <div className=" mx-1 bg-slate-900 rounded p-3 py-6 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={"tel:+998902750030"}
-              className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
+              className="  bg-slate-900  rounded-full p-3 duration-500 hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -132,15 +132,15 @@ const Contact = () => {
             </Link>
             <Link
               href={"tel:+998993912505"}
-              className="text-white titleText  hover:text-sky-500 inline-block  w-full p-6 text-center  "
+              className="text-white titleText  hover:text-sky-500 inline-block  w-full p-3 text-center  "
             >
               +99 890 275 00 30
             </Link>
           </div>
-          <div className="bg-gradient-to-br mx-1 from-slate-700 to-slate-500 rounded p-2 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
+          <div className=" mx-1 bg-slate-900 rounded p-3 py-6 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={"https://dedakhanovdilshodbek@gmail.com"}
-              className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
+              className="  bg-slate-900  rounded-full p-3 -mt-2  duration-500 hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -159,10 +159,10 @@ const Contact = () => {
               dedakhanovdilshodbek@gmail.com
             </Link>
           </div>
-          <div className="bg-gradient-to-br mx-1 from-slate-700 to-slate-500 rounded p-6 py-8 flex justify-center flex-col items-center w-full ">
+          <div className=" mx-1 bg-slate-900 rounded p-3 py-6 flex justify-center flex-col items-center w-full ">
             <Link
               href={""}
-              className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
+              className="  bg-slate-900  rounded-full p-3 duration-500 hover:scale-105"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -174,12 +174,12 @@ const Contact = () => {
                 <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
               </svg>
             </Link>
-            <p className="text-white titleText   inline-block  w-full p-6 text-center text-lg ">
+            <p className="text-white titleText   inline-block  w-full p-3 text-center text-lg ">
               Namangan, Uzbekistan
             </p>
           </div>
         </div>
-        <div className=" w-full lg:w-[32%] mt-6 mx-1 lg:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded p-8 flex flex-col    relative z-10 shadow-md">
+        <div className=" w-full lg:w-[32%] mt-6 mx-1 lg:mt-0  bg-slate-900 rounded p-8 flex flex-col    relative z-10 shadow-md">
           <div className="relative mb-4">
             <label className="leading-7 titleText text-sm text-gray-200">
               Ism:{" "}

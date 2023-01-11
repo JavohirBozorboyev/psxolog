@@ -40,7 +40,7 @@ const SliderHome = ({ posts }) => {
             {posts.slice(-5).map((item) => {
               return (
                 <SwiperSlide key={item.id}>
-                  <div className="p-2">
+                  <div className="p-2 bg-slate-900">
                     <img
                       style={{ width: "400px" }}
                       src={item.photo}
@@ -49,19 +49,19 @@ const SliderHome = ({ posts }) => {
                     />
                     <div className="p-2 flex flex-col">
                       <div>
-                        <h1 className="text-xl titleText font-bold duration-500 text-gray-900  cursor-pointer  inline-block hover:text-gray-800">
+                        <h1 className="text-xl titleText duration-500 text-white  cursor-pointer  inline-block hover:text-gray-400">
                           {item.title.slice(0, 30)}...
                         </h1>
                       </div>
                       <div>
-                        <p className="text-sm secondText font-[500!important] my-2 duration-500 text-gray-600  cursor-pointer  inline-block hover:text-gray-800">
-                          {item.body.slice(0, 80)}...
+                        <p className="text-sm secondText font-[500!important] my-2 duration-500 text-gray-400  cursor-pointer  inline-block hover:text-gray-500">
+                          {item.body.slice(0, 60)}...
                         </p>
                       </div>
                       <div>
                         <Link
                           href={`/blog/${item.slug}`}
-                          className="p-[6px] text-sm px-4 titleText bg-slate-900 inline-block  rounded-sm text-white"
+                          className="p-[6px] text-sm mt-2 font-bold px-4 titleText bg-white inline-block  rounded-sm text-slate-900"
                         >
                           Read More
                         </Link>

@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const QuizCartHome = ({ quizCategory }) => {
   return (
-    <div>
-      <div className="container mx-auto py-2 px-3 md:px-0">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <div className="mx-1">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           {quizCategory
             .filter((fil) => fil.parent === null)
             .map((item) => {
@@ -12,7 +12,7 @@ const QuizCartHome = ({ quizCategory }) => {
                 <Link
                   key={item.id}
                   href={`/quiz/${item.slug}`}
-                  className="overflow-hidden rounded-md bg-gradient-to-tr from-slate-700 to-slate-500 p-4 lg:p-12"
+                  className="overflow-hidden rounded  bg-slate-900 p-6 lg:p-12"
                 >
                   <div className="flex items-center text-blue-100">
                     <p className="text-sm font-bold uppercase secondText">
