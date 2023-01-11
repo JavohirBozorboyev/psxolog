@@ -113,9 +113,9 @@ const Contact = () => {
           perferendis numquam sit quaerat ipsam labore veniam facilis nobis
         </p>
       </div>
-      <section className=" mb-6 rounded-b-md   container mx-auto  relative py-6 flex flex-wrap   justify-between ">
+      <section className=" mb-6 rounded-b-md    container mx-auto  relative py-6 flex flex-wrap   justify-between ">
         <div className="w-full lg:w-2/3 flex flex-wrap justify-between gap-4">
-          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
+          <div className="bg-gradient-to-br mx-1 from-slate-700 to-slate-500 rounded p-6 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={"tel:+998902750030"}
               className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
@@ -137,7 +137,7 @@ const Contact = () => {
               +99 890 275 00 30
             </Link>
           </div>
-          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-2 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
+          <div className="bg-gradient-to-br mx-1 from-slate-700 to-slate-500 rounded p-2 py-8 flex justify-center flex-col items-center w-full sm:w-[47%]">
             <Link
               href={"https://dedakhanovdilshodbek@gmail.com"}
               className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
@@ -159,7 +159,7 @@ const Contact = () => {
               dedakhanovdilshodbek@gmail.com
             </Link>
           </div>
-          <div className="bg-gradient-to-br from-slate-700 to-slate-500 rounded-md p-6 py-8 flex justify-center flex-col items-center w-full ">
+          <div className="bg-gradient-to-br mx-1 from-slate-700 to-slate-500 rounded p-6 py-8 flex justify-center flex-col items-center w-full ">
             <Link
               href={""}
               className=" bg-gradient-to-br from-slate-700 to-slate-500  rounded-full p-6 duration-500 hover:scale-105"
@@ -179,7 +179,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <div className=" w-full lg:w-[32%] mt-6 lg:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded-lg p-8 flex flex-col    relative z-10 shadow-md">
+        <div className=" w-full lg:w-[32%] mt-6 mx-1 lg:mt-0 bg-gradient-to-br from-slate-700 to-slate-500 rounded p-8 flex flex-col    relative z-10 shadow-md">
           <div className="relative mb-4">
             <label className="leading-7 titleText text-sm text-gray-200">
               Ism:{" "}

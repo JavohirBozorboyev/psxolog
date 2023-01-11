@@ -4,9 +4,14 @@ import BlogHeader from "../../module/Blog/BlogHeader";
 import Head from "next/head";
 import useSWR from "swr";
 import Loading from "../../components/Loader/Loading";
+import Offline from "../../components/Loader/Offline";
 
 const Blog = () => {
   const { data: posts, error } = useSWR(`/api/post/`);
+
+  if (error) {
+    return <Offline />;
+  }
 
   return (
     <>

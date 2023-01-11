@@ -18,7 +18,7 @@ const NavLink = [
 const Footer = () => {
   return (
     <>
-      <footer className="p-4 mb-[60px] md:mb-0 bg-slate-900  shadow md:px-6 md:py-8 ">
+      <footer className="p-4 mb-[74px] m-1 rounded md:rounded-none md:m-0  md:mb-0 bg-slate-900  shadow md:px-6 md:py-8 ">
         <div className=" container mx-auto sm:flex sm:items-center sm:justify-between">
           <div className="flex titleText items-center mb-4 sm:mb-0">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
