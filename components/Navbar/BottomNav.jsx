@@ -6,7 +6,7 @@ const BottomNav = () => {
   const active = useRouter().asPath;
   return (
     <div>
-      <section className="block fixed inset-x-0 bottom-0 z-[1000] rounded m-1  bg-slate-900 md:hidden shadow-lg  shadow-slate-900">
+      <section className="block fixed inset-x-0 bottom-0 z-[1000] rounded mx-1  bg-slate-900 md:hidden shadow-lg  shadow-slate-900">
         <div className="flex justify-around ">
           <Link
             href="/"
