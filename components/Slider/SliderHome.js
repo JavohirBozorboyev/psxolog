@@ -61,7 +61,7 @@ const SliderHome = ({ posts }) => {
                       <div>
                         <Link
                           href={`/blog/${item.slug}`}
-                          className="p-[6px] text-sm mt-2 font-bold px-4 titleText bg-white inline-block  rounded-sm text-slate-900"
+                          className="p-2 px-4 inline-block titleText bg-slate-700 rounded-sm text-white mt-4"
                         >
                           Read More
                         </Link>

@@ -74,17 +74,6 @@ const BlogSlug = () => {
             </motion.p>
           </div>
         </motion.div>
-        <motion.div
-          variants={FadeInUP}
-          className="container mx-auto mt-16 px-2 md:px-0 flex justify-center"
-        >
-          <video
-            poster={data?.photo}
-            src={data?.video}
-            controls
-            className="w-full rounded-md  object-cover h-[400px]"
-          ></video>
-        </motion.div>
       </motion.main>
     </>
   );

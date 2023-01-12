@@ -26,18 +26,18 @@ const stagger = {
 
 const BlogCard = ({ posts }) => {
   return (
-    <motion.div initial="initial" animate="animate" className="py-8">
+    <motion.div initial="initial" animate="animate" className="py-8 mx-1">
       <motion.div
         variants={stagger}
         id="BlogCon"
-        className="container mx-auto px-3 md:px-0 flex flex-col gap-16"
+        className="container mx-auto  md:px-0 flex flex-col gap-16"
       >
         {posts.map((item) => {
           return (
             <motion.div
               variants={stagger}
               key={item.id}
-              className="cardBlog bg-white shadow-xl rounded-md p-3 flex justify-around flex-col items-center md:flex-row gap-4 "
+              className="cardBlog bg-slate-900 shadow-xl rounded p-3 flex justify-around flex-col items-center md:flex-row gap-4 "
             >
               <motion.div variants={FadeInUP} className="w-full md:w-1/2 left">
                 <img
@@ -49,15 +49,15 @@ const BlogCard = ({ posts }) => {
               <div className="w-full md:w-1/2 ">
                 <motion.h1
                   variants={FadeInUP}
-                  className="text-xl titleText md:text-2xl"
+                  className="text-xl text-white titleText md:text-2xl"
                 >
-                  {item.title.slice(0, 80)}
+                  {item.title.slice(0, 80)}...
                 </motion.h1>
                 <motion.p
                   variants={FadeInUP}
-                  className="mt-4 secondText font-[500!important] text-sm md:text-base"
+                  className="mt-4 text-gray-400 secondText font-[500!important] text-sm md:text-base"
                 >
-                  {item.body.slice(0, 200)}
+                  {item.body.slice(0, 200)}...
                 </motion.p>
                 <motion.div
                   variants={FadeInUP}
