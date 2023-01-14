@@ -1,14 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import QuizSlugCard from "../../../module/Quiz/QuizSlugCard";
 import useSWR from "swr";
 import Loading from "../../../components/Loader/Loading";
 import { useRouter } from "next/router";
 import Offline from "../../../components/Loader/Offline";
+import Question from "../../../components/Question/Question";
 
 const index = ({}) => {
   const router = useRouter();
+  const [activeModal, setActiveModal] = useState(false);
+  const [cardData, setCardData] = useState();
+  const [activeQuestionCard, setActiveQuestionCard] = useState(false);
   const { data, error } = useSWR(`/api/category/`);
   const { data: obj } = useSWR(`/api/category/${router.query.slug || ""}/`);
 
@@ -16,6 +20,7 @@ const index = ({}) => {
     return <Offline />;
   }
 
+  console.log(activeModal, cardData);
   return (
     <div>
       <Head>
@@ -39,7 +44,17 @@ const index = ({}) => {
             </p>
           </div>
         </div>
-        {!data || !obj ? <Loading /> : <QuizSlugCard data={data} obj={obj} />}
+        {!data || !obj ? (
+          <Loading />
+        ) : (
+          <QuizSlugCard
+            data={data}
+            obj={obj}
+            setActiveModal={setActiveModal}
+            setCardData={setCardData}
+          />
+        )}
+        {/* <Question /> */}
       </main>
     </div>
   );

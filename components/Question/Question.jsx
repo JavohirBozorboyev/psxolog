@@ -39,30 +39,18 @@ const Question = () => {
   };
 
   return (
-    <div className="bg-slate-900 w-full min-h-screen flex flex-col justify-center absolute top-0 bottom-0  z-[2000]">
+    <div className="bg-slate-900 rounded p-4 flex flex-col justify-center mx-1 top-0 bottom-0  z-[2000]">
       <div className="container m-auto">
         {showScore ? (
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-3xl font-semibold text-center text-white">
               You scored {score} out of {questions.length}
             </h1>
-            <div>
-              <Link
-                href="/"
-                className=" mt-10 md:ml-0 flex p-2 px-6 font-bold text-lg uppercase bg-white  text-white duration-500 hover:border-red-500 hover:text-red-500 border-4 bg-transparent "
-                style={{
-                  clipPath:
-                    " polygon(11% 0, 80% 0%, 100% 0, 100% 56%, 87% 100%, 0 100%, 0% 80%, 0 46%)",
-                }}
-              >
-                Go Quiz page
-              </Link>
-            </div>
           </div>
         ) : (
           <>
-            <div className="flex flex-col items-start w-full">
-              <h4 className="mt-10 text-xl text-white/60">
+            <div className="flex flex-col items-start mb-2">
+              <h4 className=" text-xl text-white/60">
                 Question {currentQuestion + 1} of {questions.length}
               </h4>
               <div className="mt-4 text-2xl text-white">
@@ -73,7 +61,7 @@ const Question = () => {
               {questions[currentQuestion].answerOptions.map((answer, index) => (
                 <div
                   key={index}
-                  className="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-white/10 rounded-xl bg-white/5"
+                  className="flex items-center w-full py-4 px-2 m-2 ml-0  border-2 cursor-pointer border-white/10 rounded bg-white/5"
                   onClick={(e) => handleAnswerOption(answer.answer)}
                 >
                   <input
@@ -85,16 +73,16 @@ const Question = () => {
                       selectedOptions[currentQuestion]?.answerByUser
                     }
                     onChange={(e) => handleAnswerOption(answer.answer)}
-                    className="w-6 h-6 bg-black"
+                    className="w-6 h-6"
                   />
-                  <p className="ml-6 text-white">{answer.answer}</p>
+                  <p className="ml-6 text-white">{answer.answer} </p>
                 </div>
               ))}
             </div>
             <div className="flex justify-between w-full mt-4 text-white">
               <button
                 onClick={handlePrevious}
-                className="w-[49%] py-3 bg-indigo-600 rounded-lg"
+                className="w-[49%] py-3 bg-slate-600 rounded titleText"
               >
                 Previous
               </button>
@@ -104,7 +92,7 @@ const Question = () => {
                     ? handleSubmitButton
                     : handleNext
                 }
-                className="w-[49%] py-3 bg-indigo-600 rounded-lg"
+                className="w-[49%] py-3 bg-slate-600 rounded titleText"
               >
                 {currentQuestion + 1 === questions.length ? "Submit" : "Next"}
               </button>
