@@ -7,8 +7,9 @@ import Loading from "../../../components/Loader/Loading";
 import { useRouter } from "next/router";
 import Offline from "../../../components/Loader/Offline";
 import Question from "../../../components/Question/Question";
+import { Modal, Box } from "@mantine/core";
 
-const index = ({}) => {
+const index = () => {
   const router = useRouter();
   const [activeModal, setActiveModal] = useState(false);
   const [cardData, setCardData] = useState();
@@ -20,7 +21,6 @@ const index = ({}) => {
     return <Offline />;
   }
 
-  console.log(activeModal, cardData);
   return (
     <div>
       <Head>
@@ -52,10 +52,21 @@ const index = ({}) => {
             obj={obj}
             setActiveModal={setActiveModal}
             setCardData={setCardData}
+            setActiveQuestionCard={setActiveQuestionCard}
           />
         )}
-        {/* <Question /> */}
       </main>
+      <Modal
+        opened={activeQuestionCard}
+        onClose={() => null}
+        withCloseButton={false}
+        fullScreen
+        className="z-[2000] m-0 p-0 "
+      >
+        <Box className="  absolute left-0 right-0 top-0 bottom-0 ">
+          <Question setActiveQuestionCard={setActiveQuestionCard} />
+        </Box>
+      </Modal>
     </div>
   );
 };

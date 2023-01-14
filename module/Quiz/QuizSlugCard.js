@@ -9,7 +9,13 @@ import {
   Button,
 } from "@mantine/core";
 
-const QuizSlugCard = ({ data, obj, setActiveModal, setCardData }) => {
+const QuizSlugCard = ({
+  data,
+  obj,
+  setActiveModal,
+  setCardData,
+  setActiveQuestionCard,
+}) => {
   const [opened, setOpened] = useState(false);
   const [itemData, setItemData] = useState();
   const [validate, setValidate] = useState(false);
@@ -29,6 +35,8 @@ const QuizSlugCard = ({ data, obj, setActiveModal, setCardData }) => {
       },
       data: itemData,
     });
+    setOpened(!opened);
+    setActiveQuestionCard(true);
   };
   return (
     <>

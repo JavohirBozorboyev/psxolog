@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import questions from "../../pages/api/question.json";
 import Link from "next/link";
 
-const Question = () => {
+const Question = ({ setActiveQuestionCard }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [score, setScore] = useState(0);
@@ -39,16 +39,24 @@ const Question = () => {
   };
 
   return (
-    <div className="bg-slate-900 rounded p-4 flex flex-col justify-center mx-1 top-0 bottom-0  z-[2000]">
+    <div className="bg-slate-900  p-4  flex flex-col justify-center min-h-screen  ">
       <div className="container m-auto">
         {showScore ? (
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-3xl font-semibold text-center text-white">
               You scored {score} out of {questions.length}
             </h1>
+            <div className="mt-10 w-full flex justify-center">
+              <button
+                onClick={() => setActiveQuestionCard(false)}
+                className="w-[49%] py-3 bg-slate-600 text-white rounded titleText"
+              >
+                Ortga Qaytish
+              </button>
+            </div>
           </div>
         ) : (
-          <>
+          <div className="">
             <div className="flex flex-col items-start mb-2">
               <h4 className=" text-xl text-white/60">
                 Question {currentQuestion + 1} of {questions.length}
@@ -97,7 +105,7 @@ const Question = () => {
                 {currentQuestion + 1 === questions.length ? "Submit" : "Next"}
               </button>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>
