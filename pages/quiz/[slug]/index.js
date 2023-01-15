@@ -14,9 +14,11 @@ const index = () => {
   const [activeModal, setActiveModal] = useState(false);
   const [cardData, setCardData] = useState();
   const [activeQuestionCard, setActiveQuestionCard] = useState(false);
+  const [validate, setValidate] = useState(false);
   const { data, error } = useSWR(`/api/category/`);
   const { data: obj } = useSWR(`/api/category/${router.query.slug || ""}/`);
 
+  // console.log(cardData);
   if (error) {
     return <Offline />;
   }
@@ -53,6 +55,8 @@ const index = () => {
             setActiveModal={setActiveModal}
             setCardData={setCardData}
             setActiveQuestionCard={setActiveQuestionCard}
+            setValidate={setValidate}
+            validate={validate}
           />
         )}
       </main>
@@ -64,7 +68,10 @@ const index = () => {
         className="z-[2000] m-0 p-0 "
       >
         <Box className="  absolute left-0 right-0 top-0 bottom-0 ">
-          <Question setActiveQuestionCard={setActiveQuestionCard} />
+          <Question
+            setActiveQuestionCard={setActiveQuestionCard}
+            setValidate={setValidate}
+          />
         </Box>
       </Modal>
     </div>

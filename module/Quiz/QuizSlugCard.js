@@ -1,4 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Link from "next/link";
+import React from "react";
 import { useRef, useState } from "react";
 import {
   Box,
@@ -8,6 +10,9 @@ import {
   Input,
   Button,
 } from "@mantine/core";
+import { useSWR } from "swr";
+import axios from "axios";
+import CircleLoader from "../../components/Loader/CircleLoader";
 
 const QuizSlugCard = ({
   data,
@@ -15,10 +20,13 @@ const QuizSlugCard = ({
   setActiveModal,
   setCardData,
   setActiveQuestionCard,
+  setValidate,
+  validate,
 }) => {
   const [opened, setOpened] = useState(false);
-  const [itemData, setItemData] = useState();
-  const [validate, setValidate] = useState(false);
+  const [itemData, setItemData] = useState(null);
+
+  const [startLoading, setStartLoading] = useState(false);
   let name = useRef(null);
   let age = useRef(null);
   let num = useRef(null);
@@ -27,20 +35,32 @@ const QuizSlugCard = ({
     setActiveModal(true);
   };
   const StartTest = () => {
-    setCardData({
-      user: {
-        name: name.current.value,
-        age: age.current.value,
-        num: num.current.value,
-      },
-      data: itemData,
-    });
-    setOpened(!opened);
-    setActiveQuestionCard(true);
+    setStartLoading(true);
+    if (itemData != null) {
+      axios
+        .get(`/api/subcategory/${itemData.slug}/`)
+        .then((res) => {
+          if (res.status === 200) {
+            setCardData({
+              user: {
+                name: name.current.value,
+                age: age.current.value,
+                num: num.current.value,
+              },
+              cardItem: itemData,
+              data: res.data,
+            });
+            setActiveQuestionCard(true);
+            setOpened(!opened);
+            setStartLoading(false);
+          }
+        })
+        .catch((error) => console.log(error));
+    }
   };
   return (
     <>
-      {" "}
+      {startLoading ? <CircleLoader /> : null}{" "}
       <div className="mx-1">
         <div className="container mx-auto py-2">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -53,11 +73,11 @@ const QuizSlugCard = ({
                     className="overflow-hidden rounded bg-slate-900 p-4 lg:p-12"
                   >
                     <h2 className=" text-xl titleText font-semibold text-slate-100">
-                      {item.name.slice(0, 30)}...
+                      {item.name}
                     </h2>
 
                     <p className="mt-4 text-sm secondText font-[400]  text-gray-400">
-                      {item.body.slice(0, 80)}...
+                      {item.body}
                     </p>
                     <button
                       type="button"
@@ -80,7 +100,6 @@ const QuizSlugCard = ({
         opened={opened}
         onClose={() => setOpened(false)}
         title="Malumotlarni To'ldiring !"
-        centered
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <Box>
@@ -107,7 +126,12 @@ const QuizSlugCard = ({
           </Box>
           <Box>
             <Input.Wrapper label="Telefon raqam kiriting.." required>
-              <Input placeholder="Your phone" ref={num} defaultValue={"+998"} />
+              <Input
+                type={"number"}
+                placeholder="Your phone"
+                ref={num}
+                defaultValue={998}
+              />
             </Input.Wrapper>
           </Box>
           <Box className="mt-4 flex justify-end gap-2">
@@ -115,6 +139,7 @@ const QuizSlugCard = ({
               radius="xs"
               size="md"
               variant="default"
+              onClick={() => setOpened(false)}
               className="bg-slate-500 duration-200 text-white hover:bg-slate-600 rounded"
             >
               Bekor Qilish

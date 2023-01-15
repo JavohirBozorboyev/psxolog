@@ -25,7 +25,7 @@ const Footer = () => {
               Dedahanov Dilshod
             </span>
           </div>
-          <dic className="flex flex-wrap gap-4 items-center mb-6 sm:mb-0">
+          <dic className="flex flex-col md:flex-row flex-wrap gap-4 mt-8 md:mt-0 md:items-center mb-6 sm:mb-0">
             {NavLink.map((link, index) => {
               return (
                 <Link
@@ -42,7 +42,7 @@ const Footer = () => {
           </dic>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm secondText text-gray-500 sm:text-center dark:text-gray-400">
+        <span className="block text-xs secondText text-gray-500 sm:text-center dark:text-gray-400">
           © 2022 {}
           <a href="" target="_blank" className="hover:underline mx-1 titleText">
             {"Ulug'bek Xatamjonov "}

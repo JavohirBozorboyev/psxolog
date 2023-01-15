@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import questions from "../../pages/api/question.json";
 import Link from "next/link";
 
-const Question = ({ setActiveQuestionCard }) => {
+const Question = ({ setActiveQuestionCard, setValidate }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [score, setScore] = useState(0);
@@ -22,7 +22,6 @@ const Question = ({ setActiveQuestionCard }) => {
       (selectedOptions[currentQuestion] = { answerByUser: answer }),
     ]);
     setSelectedOptions([...selectedOptions]);
-    // console.log(selectedOptions, "sasas");
   };
   const handleSubmitButton = () => {
     let newScore = 0;
@@ -48,7 +47,10 @@ const Question = ({ setActiveQuestionCard }) => {
             </h1>
             <div className="mt-10 w-full flex justify-center">
               <button
-                onClick={() => setActiveQuestionCard(false)}
+                onClick={() => {
+                  setActiveQuestionCard(false);
+                  setValidate(false);
+                }}
                 className="w-[49%] py-3 bg-slate-600 text-white rounded titleText"
               >
                 Ortga Qaytish
