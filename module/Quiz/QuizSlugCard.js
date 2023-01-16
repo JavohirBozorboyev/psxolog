@@ -48,7 +48,7 @@ const QuizSlugCard = ({
                 num: num.current.value,
               },
               cardItem: itemData,
-              data: res.data,
+              data: res.data.test_category,
             });
             setActiveQuestionCard(true);
             setOpened(!opened);

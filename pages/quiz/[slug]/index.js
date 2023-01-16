@@ -18,7 +18,6 @@ const index = () => {
   const { data, error } = useSWR(`/api/category/`);
   const { data: obj } = useSWR(`/api/category/${router.query.slug || ""}/`);
 
-  // console.log(cardData);
   if (error) {
     return <Offline />;
   }
@@ -71,6 +70,7 @@ const index = () => {
           <Question
             setActiveQuestionCard={setActiveQuestionCard}
             setValidate={setValidate}
+            cardData={cardData}
           />
         </Box>
       </Modal>

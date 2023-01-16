@@ -80,7 +80,7 @@ a {
   object-fit: cover;
 }
 
-input[type="radio"]:after {
+/* input[type="radio"]:after {
   width: 24px;
   height: 24px;
   border-radius: 24px;
@@ -104,7 +104,7 @@ input[type="radio"]:checked:after {
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
-}
+} */
 
 @media (min-width: 768px) {
   .cardBlog:nth-child(even) {
