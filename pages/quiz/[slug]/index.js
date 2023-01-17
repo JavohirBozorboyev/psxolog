@@ -69,7 +69,6 @@ const index = () => {
         <Box className="  absolute left-0 right-0 top-0 bottom-0 ">
           <Question
             setActiveQuestionCard={setActiveQuestionCard}
-            setValidate={setValidate}
             cardData={cardData}
           />
         </Box>
