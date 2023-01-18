@@ -18,6 +18,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
       ...e,
       { test_id: test[currentQuestion].id, answer_id: val },
     ]);
+    setVal(null);
   };
 
   const handleSubmitButton = () => {

@@ -103,7 +103,7 @@ const Header = () => {
               src={Avatar}
               placeholder="blur"
               alt="Shifokor, psiholog, do'ktor"
-              className="w-[500px] z-20 lg:mr-10  rounded-md"
+              className="w-[500px] z-20 lg:mr-10  rounded "
             />
           </motion.div>
           <motion.div
@@ -116,7 +116,7 @@ const Header = () => {
                 ease: easing,
               },
             }}
-            className="bg-gradient-to-br from-slate-700 to-slate-500 w-[400px] h-[110%] absolute right-0 z-0  rounded-md hidden lg:block "
+            className="bg-slate-900 w-[400px] h-[110%] absolute right-0 z-0  rounded-md hidden lg:block "
           ></motion.div>
         </div>
       </motion.div>
