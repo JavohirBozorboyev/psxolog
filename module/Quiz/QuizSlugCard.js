@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable react-hooks/rules-of-hooks */
 import Link from "next/link";
 import React from "react";
@@ -7,8 +8,8 @@ import {
   Modal,
   NumberInput,
   TextInput,
-  Input,
   Button,
+  Radio,
 } from "@mantine/core";
 import { useSWR } from "swr";
 import axios from "axios";
@@ -29,13 +30,14 @@ const QuizSlugCard = ({
   const [startLoading, setStartLoading] = useState(false);
   let name = useRef(null);
   let age = useRef(null);
-  let num = useRef(null);
+  let [gender, setGender] = useState("");
   const alf = () => {
     setOpened(!opened);
     setActiveModal(true);
   };
   const StartTest = () => {
     setStartLoading(true);
+    
     if (itemData != null) {
       axios
         .get(`/api/subcategory/${itemData.slug}/`)
@@ -45,7 +47,7 @@ const QuizSlugCard = ({
               user: {
                 name: name.current.value,
                 age: age.current.value,
-                num: num.current.value,
+                gender: gender,
               },
               cardItem: itemData,
               data: res.data.test_category,
@@ -125,14 +127,10 @@ const QuizSlugCard = ({
             />
           </Box>
           <Box>
-            <Input.Wrapper label="Telefon raqam kiriting.." required>
-              <Input
-                type={"number"}
-                placeholder="Your phone"
-                ref={num}
-                defaultValue={998}
-              />
-            </Input.Wrapper>
+            <Radio.Group withAsterisk onChange={setGender}>
+              <Radio value="men" label="Erkak" />
+              <Radio value="woman" label="Ayol" />
+            </Radio.Group>
           </Box>
           <Box className="mt-4 flex justify-end gap-2">
             <Button

@@ -7,7 +7,9 @@ import Loading from "../../components/Loader/Loading";
 import Offline from "../../components/Loader/Offline";
 
 const Blog = () => {
-  const { data: posts, error } = useSWR(`/api/post/`);
+  const { data: posts, error } = useSWR(`/api/post/`, {
+    refreshInterval: 1000,
+  });
 
   if (error) {
     return <Offline />;

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import questions from "../../pages/api/question.json";
-import Link from "next/link";
+
 import { Radio, Button, Box } from "@mantine/core";
+import axios from "axios";
 
 const Question = ({ setActiveQuestionCard, cardData }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -16,20 +16,49 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
     nextQues < test.length && setCurrentQuestion(nextQues);
     setSelectedOptions((e) => [
       ...e,
-      { test_id: test[currentQuestion].id, answer_id: val },
+      { test_id: test[currentQuestion]?.id, answer_id: +val },
     ]);
     setVal(null);
   };
 
-  const handleSubmitButton = () => {
+  const handleSubmitButton = async () => {
     if (test.length > selectedOptions.length) {
       setShowScore(true);
       setSelectedOptions((e) => [
         ...e,
-        { test_id: test[currentQuestion].id, answer_id: val },
+        { test_id: test[currentQuestion].id, answer_id: +val },
       ]);
+
+      try {
+        var options = {
+          method: 'POST',
+          url: '/admin-api/info/',
+
+          data: {
+            full_name: `${cardData.user.name}`,
+            age: cardData?.user?.age || 0,
+            gender: `${cardData?.user?.age || "man"}`,
+            category: cardData.cardItem.id,
+            test_ball: '1',
+            test_result: 'bad',
+            test_api: JSON.stringify([{
+              category: cardData.cardItem.id,
+              tests: selectedOptions
+            }])
+          }
+        };
+
+        axios.request(options).then(function (response) {
+          // console.log(response.data);
+        }).catch(function (error) {
+          console.error(error);
+        });
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
+
 
   return (
     <div className=" min-h-screen flex items-center ">
@@ -56,7 +85,8 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
           <Radio.Group
             name="favoriteFramework"
             orientation="vertical"
-            label={`${currentQuestion + 1} | ${test[currentQuestion].body}`}
+            label={`${currentQuestion + 1} | ${test[currentQuestion]?.body || ""
+              }`}
             spacing="md"
             offset="xl"
             size="lg"
@@ -65,7 +95,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
               setVal(e);
             }}
           >
-            {test[currentQuestion].answer.map((item, index) => {
+            {test[currentQuestion]?.answer.map((item, index) => {
               return (
                 <Radio
                   key={index}
@@ -77,12 +107,8 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
             })}
           </Radio.Group>
           <Box className="mt-6 flex justify-end">
-            <Button
-              onClick={
-                currentQuestion + 1 === test.length
-                  ? handleSubmitButton
-                  : handleNext
-              }
+            {val === null ? <Button
+              disabled
               size="md"
               style={{ letterSpacing: "2px" }}
               className="bg-slate-900 uppercase titleText hover:bg-slate-700 active:bg-slate-700"
@@ -90,7 +116,21 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
               {currentQuestion + 1 === test.length
                 ? "Tugatish"
                 : "Keyingi Savol"}
-            </Button>
+            </Button> :
+              <Button
+                onClick={
+                  currentQuestion + 1 === test.length
+                    ? handleSubmitButton
+                    : handleNext
+                }
+                size="md"
+                style={{ letterSpacing: "2px" }}
+                className="bg-slate-900 uppercase titleText hover:bg-slate-700 active:bg-slate-700"
+              >
+                {currentQuestion + 1 === test.length
+                  ? "Tugatish"
+                  : "Keyingi Savol"}
+              </Button>}
           </Box>
         </div>
       )}

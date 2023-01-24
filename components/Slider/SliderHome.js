@@ -37,7 +37,7 @@ const SliderHome = ({ posts }) => {
           className="mySwiper"
         >
           <div>
-            {posts.slice(-5).map((item) => {
+            {posts.slice(0, 5).map((item) => {
               return (
                 <SwiperSlide key={item.id}>
                   <div className="p-2 bg-slate-900">

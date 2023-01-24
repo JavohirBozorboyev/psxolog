@@ -8,7 +8,9 @@ import Offline from "../../components/Loader/Offline";
 import QuizHeader from "../../module/Quiz/QuizHeader";
 
 const index = () => {
-  const { data: quizCategory, error } = useSWR(`/api/category/`);
+  const { data: quizCategory, error } = useSWR(`/api/category/`, {
+    refreshInterval: 1000,
+  });
 
   if (error) {
     return <Offline />;

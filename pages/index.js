@@ -12,8 +12,12 @@ import Loading from "../components/Loader/Loading";
 import Offline from "../components/Loader/Offline";
 
 export default function Home() {
-  const { data: posts, error } = useSWR("/api/post/");
-  const { data: quizCategory } = useSWR("/api/category/");
+  const { data: posts, error } = useSWR("/api/post/", {
+    refreshInterval: 1000,
+  });
+  const { data: quizCategory } = useSWR("/api/category/", {
+    refreshInterval: 1000,
+  });
 
   if (error) {
     return <Offline />;
