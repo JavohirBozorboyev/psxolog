@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import Loading from "../../../components/Loader/Loading";
+import Image from "next/image";
 const easing = [0.6, -0.5, 0.01, 0.99];
 
 const FadeInUP = {
@@ -53,13 +54,18 @@ const BlogSlug = () => {
             variants={FadeInUP}
             className="w-full md:w-1/2 md:sticky top-[30px]  md:h-[500px]"
           >
-            <img
+            <Image
+              width={500}
+              height={500}
+              placeholder="blur"
+
+              blurDataURL={data?.photo}
               src={data?.photo}
               alt={data?.title}
               className=" shadow-xl w-full md:h-[500px] object-cover rounded-md"
             />
           </motion.div>
-          <div className="w-full md:w-1/2  overflow-auto ">
+          <div className="w-full md:w-1/2  overflow-hidden ">
             <motion.h1
               variants={FadeInUP}
               className="text-slate-700 titleText font-bold text-2xl lg:text-4xl"
@@ -71,6 +77,7 @@ const BlogSlug = () => {
               className="mt-4 secondText font-[500!important] text-slate-600 md:text-lg"
             >
               {data?.body}
+
             </motion.p>
           </div>
         </motion.div>

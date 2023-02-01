@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/alt-text */
 "use client";
 
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { useRef } from "react";
-import { motion, useCycle } from "framer-motion";
-
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Logo from "./Logo.png";
 const NavLink = [
   {
     name: "Home",
@@ -79,9 +80,9 @@ const Navbar = () => {
             <Link
               onClick={() => setOpen(false)}
               href="/"
-              className=" titleText text-xl uppercase font-bold text-white  md:p-2 md:px-4 md:bg-slate-700 rounded"
+              className=" titleText text-white flex gap-2 items-center "
             >
-              Dedahanov
+              <Image src={Logo} alt="Dedahanov Dilshod" width={40} height={40} /> <span className="uppercase font-bold text-xl">Dedahanov</span>
             </Link>
             <div className=" md:hidden " onClick={handler}>
               {open ? (
@@ -121,9 +122,8 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className={`  w-full mt-10 md:flex flex-col gap-1 md:w-1/3 md:mt-0 md:flex-row md:justify-center ${
-              open ? "flex" : "hidden"
-            } `}
+            className={`  w-full mt-10 md:flex flex-col gap-1 md:w-1/3 md:mt-0 md:flex-row md:justify-center ${open ? "flex" : "hidden"
+              } `}
           >
             {NavLink.map((link, index) => {
               return (
@@ -131,9 +131,8 @@ const Navbar = () => {
                   key={index}
                   onClick={handler}
                   href={link.url}
-                  className={`text-lg block text-gray-400 secondText duration-500 hover:bg-slate-700 hover:text-white  p-4 rounded md:p-2 md:px-4 ${
-                    router.route === link.url ? "text-white bg-slate-700" : null
-                  }`}
+                  className={`text-lg block text-gray-400 secondText duration-500 hover:bg-slate-700 hover:text-white  p-4 rounded md:p-2 md:px-4 ${router.route === link.url ? "text-white bg-slate-700" : null
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -141,9 +140,8 @@ const Navbar = () => {
             })}
           </div>
           <div
-            className={` w-full mt-2 md:flex duration-500  items-center gap-2 md:w-1/3 md:mt-0 md:justify-end  md:gap-1 ${
-              open ? "flex" : "hidden"
-            } `}
+            className={` w-full mt-2 md:flex duration-500  items-center gap-2 md:w-1/3 md:mt-0 md:justify-end  md:gap-1 ${open ? "flex" : "hidden"
+              } `}
           >
             <a
               href=""

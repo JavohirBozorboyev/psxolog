@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["psihologictest2.pythonanywhere.com"],
+    domains: ["https://backend.tibbiypsihologiya.uz", 'backend.tibbiypsihologiya.uz'],
+
   },
 };
 

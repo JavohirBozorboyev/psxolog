@@ -21,7 +21,7 @@ const Footer = () => {
       <footer className="p-4 mb-[74px] m-1 rounded md:rounded-none md:m-0  md:mb-0 bg-slate-900  shadow md:px-6 md:py-8 ">
         <div className=" container mx-auto sm:flex sm:items-center sm:justify-between">
           <div className="flex titleText items-center mb-4 sm:mb-0">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-xl font-semibold text-white">
               Dedahanov Dilshod
             </span>
           </div>
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-xs secondText text-gray-500 sm:text-center dark:text-gray-400">
-          © 2022 {}
+          © 2023 { }
           <a href="" target="_blank" className="hover:underline mx-1 titleText">
             {"Ulug'bek Xatamjonov "}
           </a>
@@ -51,7 +51,7 @@ const Footer = () => {
           <a href="" target="_blank" className="hover:underline mx-1 titleText">
             {" Javohir Bozorboyev"}
           </a>
-          . Createor
+          . Developer
         </span>
       </footer>
     </>

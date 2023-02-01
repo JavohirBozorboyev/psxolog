@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 const easing = [0.6, -0.5, 0.01, 0.99];
 
 const FadeInUP = {
@@ -30,20 +30,25 @@ const BlogCard = ({ posts }) => {
       <motion.div
         variants={stagger}
         id="BlogCon"
-        className="container mx-auto  md:px-0 flex flex-col gap-16"
+        className="container  overflow-hidden mx-auto  md:px-0 flex flex-col gap-16"
       >
         {posts.map((item) => {
           return (
             <motion.div
               variants={stagger}
               key={item.id}
-              className="cardBlog bg-slate-900 shadow-xl rounded p-3 flex justify-around flex-col items-center md:flex-row gap-4 "
+              className="cardBlog  bg-slate-900 shadow-xl rounded p-3 flex justify-around flex-col items-center md:flex-row gap-4 "
             >
-              <motion.div variants={FadeInUP} className="w-full md:w-1/2 left">
-                <img
+              <motion.div variants={FadeInUP} className="w-full md:w-1/2 left ">
+                <Image
                   src={item.photo}
                   alt={item.title}
-                  className="w-full lg:w-[400px] h-[300px] lg:h-[400px] xl:w-full object-cover  rounded-md overflow-hidden -mt-10"
+                  width={500}
+                  height={500}
+                  placeholder="blur"
+                 
+                  blurDataURL={item.photo}
+                  className="w-full lg:w-[400px] h-[300px] lg:h-[400px] xl:w-full object-cover  rounded-md -mt-10"
                 />
               </motion.div>
               <div className="w-full md:w-1/2 ">

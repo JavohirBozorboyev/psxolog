@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -39,15 +39,20 @@ const SliderHome = ({ posts }) => {
           <div>
             {posts.slice(0, 5).map((item) => {
               return (
-                <SwiperSlide key={item.id}>
-                  <div className="p-2 bg-slate-900">
-                    <img
-                      style={{ width: "400px" }}
-                      src={item.photo}
+                <SwiperSlide key={item.id} >
+                  <div className="p-2 bg-slate-900 h-[480px] flex justify-around flex-col ">
+                    <Image
+                      style={{ width: "400px", height: '50%' }}
+                      src={item?.photo}
                       className="z-0 rounded-sm"
                       alt={item.title}
+                      width={500}
+                      height={500}
+                      placeholder="blur"
+
+                      blurDataURL={item?.photo}
                     />
-                    <div className="p-2 flex flex-col">
+                    <div className="p-2 h-[50%] flex flex-col justify-around">
                       <div>
                         <h1 className="text-xl titleText duration-500 text-white  cursor-pointer  inline-block hover:text-gray-400">
                           {item.title.slice(0, 30)}...
@@ -56,6 +61,7 @@ const SliderHome = ({ posts }) => {
                       <div>
                         <p className="text-sm secondText font-[500!important] my-2 duration-500 text-gray-400  cursor-pointer  inline-block hover:text-gray-500">
                           {item.body.slice(0, 60)}...
+
                         </p>
                       </div>
                       <div>
