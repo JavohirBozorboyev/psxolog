@@ -130,7 +130,7 @@ const QuizSlugCard = ({
             />
           </Box>
           <Box>
-            <Radio.Group value="man" withAsterisk onChange={setGender}>
+            <Radio.Group defaultValue="man" withAsterisk onChange={setGender}>
               <Radio value="man" label="Erkak" />
               <Radio value="woman" label="Ayol" />
             </Radio.Group>

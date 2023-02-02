@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 
 import { Radio, Button, Box } from "@mantine/core";
 import axios from "axios";
@@ -8,6 +8,10 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [showScore, setShowScore] = useState(false);
   const [val, setVal] = useState(null);
+  const [answerApi, setAnswerApi] = useState(null)
+  const [loadApiAnswer, setLoadApiAnswer] = useState(false)
+  const [getApiButtonState, setGetApiButtonState] = useState(false)
+
 
   let test = cardData.data;
 
@@ -21,6 +25,45 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
     setVal(null);
   };
 
+
+
+  let AnswerApi = useCallback(async () => {
+
+    try {
+      var options = {
+        method: 'POST',
+        url: '/admin-api/info/',
+
+        data: {
+          full_name: `${cardData.user.name}`,
+          age: cardData?.user?.age || 0,
+          gender: `${cardData?.user?.gender == "" ? "men" : cardData?.user?.gender}`,
+          category: cardData.cardItem.id,
+          test_ball: '1',
+          test_result: 'bad',
+          test_api: JSON.stringify([{
+            category: cardData.cardItem.id,
+            tests: selectedOptions
+          }])
+        }
+      };
+
+      await axios.request(options).then(function (response) {
+        console.log(response.data);
+        if (response.status === 200) {
+          setAnswerApi(response.data)
+          setLoadApiAnswer(true)
+        }
+
+      }).catch(function (error) {
+        console.error(error);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+
+  }, [cardData.cardItem.id, cardData.user?.age, cardData.user?.gender, cardData.user.name, selectedOptions])
+
   const handleSubmitButton = async () => {
     if (test.length > selectedOptions.length) {
       setShowScore(true);
@@ -29,35 +72,13 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
         { test_id: test[currentQuestion].id, answer_id: +val },
       ]);
 
-      try {
-        var options = {
-          method: 'POST',
-          url: '/admin-api/info/',
+      await AnswerApi()
 
-          data: {
-            full_name: `${cardData.user.name}`,
-            age: cardData?.user?.age || 0,
-            gender: `${cardData?.user?.age}`,
-            category: cardData.cardItem.id,
-            test_ball: '1',
-            test_result: 'bad',
-            test_api: JSON.stringify([{
-              category: cardData.cardItem.id,
-              tests: selectedOptions
-            }])
-          }
-        };
-
-        axios.request(options).then(function (response) {
-          console.log(response.data);
-        }).catch(function (error) {
-          console.error(error);
-        });
-      } catch (error) {
-        console.error(error);
-      }
     }
+
   };
+
+
 
 
   return (
@@ -68,6 +89,24 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
           <h1 className="text-2xl text-slate-900 uppercase titleText text-center">
             Sizning Natijangiz{" "}
           </h1>{" "}
+          <div>
+            {loadApiAnswer === true ? <div className="text-xl secondText">
+              <h1 className="text-center mt-4 text-gray-700">
+                {answerApi.message}
+              </h1>
+              <h1 className="text-center mt-4 text-slate-900">
+                {answerApi.tashxis}
+              </h1>
+              <h1 className="text-center mt-4 text-gray-600">
+                {answerApi.doctor}
+              </h1>
+              <h1 className="text-center mt-4 text-gray-600">
+                {answerApi.tel}
+              </h1>
+            </div>
+              :
+              <h1 className="text-xl">Loading...</h1>}
+          </div>
           <div className="mt-6 flex justify-center">
             <Button
               variant="default"
@@ -133,8 +172,9 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
               </Button>}
           </Box>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 
