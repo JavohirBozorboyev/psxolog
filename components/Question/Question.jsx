@@ -37,7 +37,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
           data: {
             full_name: `${cardData.user.name}`,
             age: cardData?.user?.age || 0,
-            gender: `${cardData?.user?.age || "man"}`,
+            gender: `${cardData?.user?.age}`,
             category: cardData.cardItem.id,
             test_ball: '1',
             test_result: 'bad',
@@ -49,7 +49,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
         };
 
         axios.request(options).then(function (response) {
-          // console.log(response.data);
+          console.log(response.data);
         }).catch(function (error) {
           console.error(error);
         });

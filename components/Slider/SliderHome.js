@@ -69,7 +69,7 @@ const SliderHome = ({ posts }) => {
                           href={`/blog/${item.slug}`}
                           className="p-2 px-4 inline-block titleText bg-slate-700 rounded-sm text-white mt-4"
                         >
-                          {"Davomini O'qish"}
+                          {"Davomini o'qish"}
                         </Link>
                       </div>
                     </div>

@@ -45,7 +45,10 @@ export default function Home() {
                   Psxologik testlar
                 </h1>
                 <p className="text-slate-700 mt-4 secondText text-base md:text-lg   text-center md:w-1/2  ">
-                  {"Quydagi testlarni yechish orqali, Siz o'zingizning salomatligingiz haqida malumotlarni bilib oling."}
+                  {"Quydagi testlarni yechish orqali, Siz o'zingizning psxologik xolatingiz haqida bilib oling. "} <br />
+                  {
+                    "Testlarni yechish uchun quydagi bo'limlardan birini tanlang."
+                  }
                 </p>
               </div>
             </div>

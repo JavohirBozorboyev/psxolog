@@ -30,7 +30,7 @@ const Contact = () => {
       yosh.current.value.length > 1
     ) {
       axios
-        .post("https://psihologictest2.pythonanywhere.com/admin-api/contact/", {
+        .post("/admin-api/contact/", {
           full_name: ism.current.value,
           age: yosh.current.value,
           body: massage.current.value,
@@ -109,7 +109,8 @@ const Contact = () => {
           {"Bog'lanish"}
         </h1>
         <p className="mt-4 secondText text-md md:text-lg w-full md:w-[60%]">
-          {"Do'ktor bilan quydagilardan biri orqali bo'glanishingiz mumkun, O'z salomatligizni asrang."}
+          {"Do'ktor bilan quydagilardan biri orqali bo'glanishingiz mumkun. "} <br />
+          {"O'z salomatligizni asrang!"}
         </p>
       </div>
       <section className=" mb-6 rounded-b-md    container mx-auto  relative py-6 flex flex-wrap   justify-between ">
@@ -234,7 +235,7 @@ const Contact = () => {
             type="submit"
             className="text-slate-900 titleText uppercase font-extrabold duration-500 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"
           >
-            Submit
+            {"Jo'natish"}
           </button>
         </div>
       </section>

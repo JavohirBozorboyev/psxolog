@@ -49,10 +49,10 @@ const Header = () => {
               className=" titleText text-4xl sm:text-5xl uppercase lg:text-6xl xl:text-6xl font-e mt-2 text-slate-900"
             >
               {" "}
-              Deddahanov Dilshod
+              Dedahanov Dilshod
               <motion.span className="text-slate-500">
                 {" "}
-                Toxrovich
+                Toxirovich
               </motion.span>{" "}
             </motion.div>
             <motion.p
@@ -60,7 +60,7 @@ const Header = () => {
               className="mt-6 font-[600] secondText text-slate-700 text-lg lg:w-8/12"
             >
               {
-                "Vrach Tibbiy psixolog, psixoterapevt. 8-yillik ish tajribasiga ega  va 500 dan ortiq bemorlarga tibbiy hizmat ko'rsatgan."
+                "Doktor tibbiy psxolog, psxoterafevt. 6-yillik ish tajribasiga ega  va 100 dan ortiq bemorlarga tibbiy hizmat ko'rsatgan."
               }
             </motion.p>
             <motion.div
