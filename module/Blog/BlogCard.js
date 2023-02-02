@@ -30,7 +30,7 @@ const BlogCard = ({ posts }) => {
       <motion.div
         variants={stagger}
         id="BlogCon"
-        className="container  overflow-hidden mx-auto  md:px-0 flex flex-col gap-16"
+        className="container  overflow-hidden mx-auto py-8  md:px-0 flex flex-col gap-16"
       >
         {posts.map((item) => {
           return (
