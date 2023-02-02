@@ -8,7 +8,7 @@ const Info = ({ quizLength, postLength }) => {
           <div className=" flex flex-col justify-center items-center md:w-[46%] text-center">
             <p className="text-3xl text-white titleText">{quizLength}+</p>
             <p className="text-2xl text-gray-100 my-2 titleText">
-              Psxologik testlar
+              Psixologik testlar
             </p>
             <p className="text-gray-100 text-sm md:text-base secondText">
               {"Inson psxologiyasini aniqlab beruvchi va unga tibbiy ko'mak beruvchi testlar to'plami."}

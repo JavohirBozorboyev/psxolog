@@ -57,10 +57,10 @@ const Header = () => {
             </motion.div>
             <motion.p
               variants={FadeInUP}
-              className="mt-6 font-[600] secondText text-slate-700 text-lg lg:w-8/12"
+              className="mt-6 font-[600] secondText text-slate-700 text-lg lg:w-8/12 uppercase"
             >
               {
-                "Doktor tibbiy psxolog, psxoterapevt. 7-yillik ish tajribaga ega."
+                "DOKTOR  TIBBIY PSIXOLOG. PSIXOTERAPEVT. 7-yillik ish tajribaga ega."
               }
             </motion.p>
             <motion.div
