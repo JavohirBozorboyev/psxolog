@@ -9,16 +9,17 @@ import { motion } from "framer-motion";
 import Logo from "../../public/favicon1.png";
 const NavLink = [
   {
-    name: "Home",
+    name: "Bosh Sahifa",
     url: "/",
   },
+
   {
-    name: "Quiz",
-    url: "/quiz",
+    name: "Maqolalar",
+    url: "/blog",
   },
   {
-    name: "Blog",
-    url: "/blog",
+    name: "Testlar",
+    url: "/quiz",
   },
 ];
 
@@ -82,7 +83,7 @@ const Navbar = () => {
               href="/"
               className=" titleText text-white flex gap-2 items-center "
             >
-              <Image src={Logo} alt="Dedahanov Dilshod" width={30} height={40} /> <span className="uppercase font-bold text-xl">Dedahanov</span>
+              <Image src={Logo} alt="Dedahanov Dilshod" width={30} height={'auto'} /> <span className="uppercase font-bold text-xl">Dedaxanov</span>
             </Link>
             <div className=" md:hidden " onClick={handler}>
               {open ? (

@@ -49,7 +49,7 @@ const Header = () => {
               className=" titleText text-4xl sm:text-5xl uppercase lg:text-6xl xl:text-6xl font-e mt-2 text-slate-900"
             >
               {" "}
-              Dedahanov Dilshod
+              Dedaxanov Dilshod
               <motion.span className="text-slate-500">
                 {" "}
                 Toxirovich
@@ -60,7 +60,7 @@ const Header = () => {
               className="mt-6 font-[600] secondText text-slate-700 text-lg lg:w-8/12"
             >
               {
-                "Doktor tibbiy psxolog, psxoterafevt. 6-yillik ish tajribasiga ega  va 100 dan ortiq bemorlarga tibbiy hizmat ko'rsatgan."
+                "Doktor tibbiy psxolog, psxoterapevt. 7-yillik ish tajribaga ega."
               }
             </motion.p>
             <motion.div
@@ -68,7 +68,7 @@ const Header = () => {
               className="flex gap-5 flex-wrap mt-8"
             >
               <Link
-                href="/"
+                href="/quiz"
                 className="px-6 titleText  uppercase py-2 font-bold bg-slate-900 rounded-sm text-white  border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
               >
                 testni boshlash

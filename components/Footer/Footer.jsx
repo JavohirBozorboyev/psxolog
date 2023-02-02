@@ -2,15 +2,15 @@ import Link from "next/link";
 
 const NavLink = [
   {
-    name: "Home",
+    name: "Bosh Sahifa",
     url: "/",
   },
   {
-    name: "Quiz",
+    name: "Testlar",
     url: "/quiz",
   },
   {
-    name: "Blog",
+    name: "Maqolalar",
     url: "/blog",
   },
 ];
