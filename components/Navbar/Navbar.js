@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Logo from "./Logo.png";
+import Logo from "../../public/favicon1.png";
 const NavLink = [
   {
     name: "Home",
@@ -82,7 +82,7 @@ const Navbar = () => {
               href="/"
               className=" titleText text-white flex gap-2 items-center "
             >
-              <Image src={Logo} alt="Dedahanov Dilshod" width={40} height={40} /> <span className="uppercase font-bold text-xl">Dedahanov</span>
+              <Image src={Logo} alt="Dedahanov Dilshod" width={30} height={40} /> <span className="uppercase font-bold text-xl">Dedahanov</span>
             </Link>
             <div className=" md:hidden " onClick={handler}>
               {open ? (

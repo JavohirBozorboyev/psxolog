@@ -27,8 +27,25 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
 
 
 
-  let AnswerApi = useCallback(async () => {
+  const handleSubmitButton = async () => {
+    if (test.length > selectedOptions.length) {
+      setShowScore(true);
+      setSelectedOptions((e) => [
+        ...e,
+        { test_id: test[currentQuestion].id, answer_id: +val },
+      ]);
 
+
+      setInterval(async () => {
+        await AnswerApiPost()
+      }, 1000)
+
+
+    }
+
+  };
+
+  async function AnswerApiPost() {
     try {
       var options = {
         method: 'POST',
@@ -49,7 +66,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
       };
 
       await axios.request(options).then(function (response) {
-        console.log(response.data);
+
         if (response.status === 200) {
           setAnswerApi(response.data)
           setLoadApiAnswer(true)
@@ -62,21 +79,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
       console.error(error);
     }
 
-  }, [cardData.cardItem.id, cardData.user?.age, cardData.user?.gender, cardData.user.name, selectedOptions])
-
-  const handleSubmitButton = async () => {
-    if (test.length > selectedOptions.length) {
-      setShowScore(true);
-      setSelectedOptions((e) => [
-        ...e,
-        { test_id: test[currentQuestion].id, answer_id: +val },
-      ]);
-
-      await AnswerApi()
-
-    }
-
-  };
+  }
 
 
 
@@ -105,7 +108,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
               </h1>
             </div>
               :
-              <h1 className="text-xl">Loading...</h1>}
+              <h1 className=" text-center my-6 text-2xl titleText text-blue-500">Loading...</h1>}
           </div>
           <div className="mt-6 flex justify-center">
             <Button
