@@ -42,14 +42,13 @@ const QuizHeader = () => {
             variants={FadeInUP}
             className="text-3xl titleText md:text-4xl lg:text-5xl text-center text-slate-700 font-bold capitalize"
           >
-            My Quiz
+            PSXOLOGIK TESTLAR
           </motion.h1>
           <motion.p
             variants={FadeInUP}
             className=" lg:text-xl secondText text-center mt-6 w-full lg:w-1/2 "
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis a
-            quidem aliquid sequi assumenda ducimus, neque reprehenderit. Unde
+            {"Quydagi testlarni yechish orqali, Siz o'zingizning salomatligingiz haqida malumotlarni bilib oling."}
           </motion.p>
         </div>
         <motion.a

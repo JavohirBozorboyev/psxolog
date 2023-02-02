@@ -12,36 +12,15 @@ const QuizCartHome = ({ quizCategory }) => {
                 <Link
                   key={item.id}
                   href={`/quiz/${item.slug}`}
-                  className="overflow-hidden rounded  bg-slate-900 p-6 lg:p-12"
+                  className="overflow-hidden rounded  bg-slate-900 p-6 lg:p-8"
                 >
-                  <div className="flex items-center text-blue-100">
-                    <p className="text-sm font-bold uppercase secondText">
-                      {item.slug.slice(0, 10)}...
-                    </p>
 
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="ml-2 h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
 
-                  <h2 className="mt-4 text-xl titleText font-semibold text-slate-100">
-                    {item.name.slice(0, 30)}...
+                  <h2 className=" text-xl titleText text-center font-semibold text-slate-100">
+                    {item.name.slice(0, 30)}
                   </h2>
 
-                  <p className="mt-4 text-base text-slate-200 secondText">
-                    {item.body.slice(0, 60)}...
-                  </p>
+
                 </Link>
               );
             })}

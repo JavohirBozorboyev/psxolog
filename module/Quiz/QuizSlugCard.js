@@ -37,7 +37,7 @@ const QuizSlugCard = ({
   };
   const StartTest = () => {
     setStartLoading(true);
-    
+
     if (itemData != null) {
       axios
         .get(`/api/subcategory/${itemData.slug}/`)
@@ -72,14 +72,15 @@ const QuizSlugCard = ({
                 return (
                   <div
                     key={item.id}
-                    className="overflow-hidden rounded bg-slate-900 p-4 lg:p-12"
+                    className="overflow-hidden rounded bg-slate-900 p-4 lg:p-12 flex flex-col justify-between"
                   >
                     <h2 className=" text-xl titleText font-semibold text-slate-100">
                       {item.name}
                     </h2>
 
                     <p className="mt-4 text-sm secondText font-[400]  text-gray-400">
-                      {item.body}
+                      {item.body.slice(0, 250)}...
+
                     </p>
                     <button
                       type="button"
@@ -89,11 +90,12 @@ const QuizSlugCard = ({
                       }}
                       className="p-2 block bg-slate-700 text-white uppercase titleText mt-4 rounded w-full active:scale-95 duration-200"
                     >
-                      Start Test
+                      Testni boshlash
                     </button>
                   </div>
                 );
               })}
+
           </div>
         </div>
       </div>
@@ -101,13 +103,13 @@ const QuizSlugCard = ({
         className=" z-[3000]"
         opened={opened}
         onClose={() => setOpened(false)}
-        title="Malumotlarni To'ldiring !"
+        title="Ma'lumotlarni to'ldiring !"
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <Box>
             <TextInput
-              placeholder="Your name"
-              label="Ism kiriting.."
+              placeholder="Ismingizni kiriting..."
+              label="Ismingizni kiriting"
               withAsterisk
               ref={name}
               onChange={() => {
@@ -119,16 +121,17 @@ const QuizSlugCard = ({
           </Box>
           <Box>
             <NumberInput
-              placeholder="Your age"
-              label="Yosh kiriting.."
+              placeholder="Yoshingizni kiriting.."
+              label="Yoshingizni kiriting"
               withAsterisk
               min={0}
               ref={age}
+              value={0}
             />
           </Box>
           <Box>
-            <Radio.Group withAsterisk onChange={setGender}>
-              <Radio value="men" label="Erkak" />
+            <Radio.Group value="man" withAsterisk onChange={setGender}>
+              <Radio value="man" label="Erkak" />
               <Radio value="woman" label="Ayol" />
             </Radio.Group>
           </Box>

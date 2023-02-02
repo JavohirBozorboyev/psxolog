@@ -42,14 +42,13 @@ const BlogHeader = () => {
             variants={FadeInUP}
             className="text-3xl titleText md:text-4xl lg:text-5xl text-center text-slate-700 font-bold capitalize"
           >
-            My blogs
+            MENING BLOGIM
           </motion.h1>
           <motion.p
             variants={FadeInUP}
             className=" lg:text-xl secondText text-center mt-6 w-full lg:w-1/2 "
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis a
-            quidem aliquid sequi assumenda ducimus, neque reprehenderit. Unde
+            {"Inson psxologiyasiga doir maqolalar va suhbatlarni o'qing, Va o'zingizni salomatligingiz uchun foydali malumotlarni bilib oling."}
           </motion.p>
         </div>
         <motion.a

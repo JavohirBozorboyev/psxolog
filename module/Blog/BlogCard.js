@@ -46,7 +46,7 @@ const BlogCard = ({ posts }) => {
                   width={500}
                   height={500}
                   placeholder="blur"
-                 
+
                   blurDataURL={item.photo}
                   className="w-full lg:w-[400px] h-[300px] lg:h-[400px] xl:w-full object-cover  rounded-md -mt-10"
                 />
@@ -66,7 +66,7 @@ const BlogCard = ({ posts }) => {
                 </motion.p>
                 <motion.div
                   variants={FadeInUP}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 1 }}
                   whileFocus={{ scale: 0.9 }}
                   className=" inline-block"
@@ -75,7 +75,7 @@ const BlogCard = ({ posts }) => {
                     href={`/blog/${item.slug}`}
                     className="p-2 px-4 inline-block titleText bg-slate-700 rounded-sm text-white mt-4"
                   >
-                    Read More
+                    {" Davomoni O'qish"}
                   </Link>
                 </motion.div>
               </div>

@@ -71,7 +71,7 @@ const Header = () => {
                 href="/"
                 className="px-6 titleText  uppercase py-2 font-bold bg-slate-900 rounded-sm text-white  border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
               >
-                Start Test
+                testni boshlash
               </Link>
               <motion.div
                 whileHover={{ scale: 1.08 }}
@@ -79,18 +79,18 @@ const Header = () => {
               >
                 <Link
                   href="https://youtube.com/channel/UCkB7jvRP4czJrAp7oSGPk2g"
-                  className="px-6 titleText py-2 font-bold text-slate-600 flex items-center  ml-16 sm:ml-0"
+                  className="px-6 titleText py-2 font-bold text-red-600 flex items-center  ml-16 sm:ml-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
                     height="28"
                     viewBox="0 0 24 24"
-                    className="mr-2 fill-slate-600 animate-pulse"
+                    className="mr-2 fill-red-600 animate-pulse"
                   >
                     <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
                   </svg>
-                  Watch demos
+                  YouTube
                 </Link>
               </motion.div>
             </motion.div>

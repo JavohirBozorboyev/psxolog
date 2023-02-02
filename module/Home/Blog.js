@@ -7,12 +7,10 @@ const BlogSlider = ({ posts }) => {
       <div className="container mx-auto px-3 md:px-0 py-4">
         <div className="flex flex-col  items-center">
           <h1 className="text-slate-900 titleText font-bold lg:text-slate-900 text-4xl uppercase text-center  ">
-            My Blogs
+            Mening Blogim
           </h1>
           <p className="text-slate-900 mt-4 secondText lg:text-slate-900 text-lg   text-center md:w-1/2  ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis architecto corporis aut magni vel at, culpa ipsam nisi
-            ducimus assumenda incidunt,
+            {"Inson psxologiyasiga doir maqolalar va suhbatlarni o'qing, Va o'zingizni salomatligingiz uchun foydali malumotlarni bilib oling."}
           </p>
         </div>
       </div>

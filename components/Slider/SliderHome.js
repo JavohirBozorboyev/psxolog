@@ -40,7 +40,7 @@ const SliderHome = ({ posts }) => {
             {posts.slice(0, 5).map((item) => {
               return (
                 <SwiperSlide key={item.id} >
-                  <div className="p-2 bg-slate-900 h-[480px] flex justify-around flex-col ">
+                  <div className="p-2 bg-slate-900 h-[480px] flex justify-between flex-col ">
                     <Image
                       style={{ width: "400px", height: '50%' }}
                       src={item?.photo}
@@ -69,7 +69,7 @@ const SliderHome = ({ posts }) => {
                           href={`/blog/${item.slug}`}
                           className="p-2 px-4 inline-block titleText bg-slate-700 rounded-sm text-white mt-4"
                         >
-                          Read More
+                          {"Davomini O'qish"}
                         </Link>
                       </div>
                     </div>

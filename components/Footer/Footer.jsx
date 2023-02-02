@@ -19,12 +19,8 @@ const Footer = () => {
   return (
     <>
       <footer className="p-4 mb-[74px] m-1 rounded md:rounded-none md:m-0  md:mb-0 bg-slate-900  shadow md:px-6 md:py-8 ">
-        <div className=" container mx-auto sm:flex sm:items-center sm:justify-between">
-          <div className="flex titleText items-center mb-4 sm:mb-0">
-            <span className="self-center text-xl font-semibold text-white">
-              Dedahanov Dilshod
-            </span>
-          </div>
+        <div className=" container mx-auto sm:flex sm:items-center sm:justify-center">
+
           <dic className="flex flex-col md:flex-row flex-wrap gap-4 mt-8 md:mt-0 md:items-center mb-6 sm:mb-0">
             {NavLink.map((link, index) => {
               return (
@@ -44,11 +40,11 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-xs secondText text-gray-500 sm:text-center dark:text-gray-400">
           © 2023 { }
-          <a href="" target="_blank" className="hover:underline mx-1 titleText">
+          <a href="https://t.me/UlugbekXatamjonov" alt="Ulug'bek Xatamjonov" target="_blank" className="hover:underline mx-1 titleText" rel="noreferrer">
             {"Ulug'bek Xatamjonov "}
           </a>
           and
-          <a href="" target="_blank" className="hover:underline mx-1 titleText">
+          <a alt="Javohir Bozorboyev" href="https://t.me/Javohir_web_developer" target="_blank" className="hover:underline mx-1 titleText" rel="noreferrer">
             {" Javohir Bozorboyev"}
           </a>
           . Developer

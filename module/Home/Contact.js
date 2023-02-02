@@ -106,11 +106,10 @@ const Contact = () => {
     <>
       <div className="container px-3 md:px-0   mx-auto py-16 flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl titleText font-bold uppercase text-slate-900">
-          My Contact
+          {"Bog'lanish"}
         </h1>
         <p className="mt-4 secondText text-md md:text-lg w-full md:w-[60%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id rerum
-          perferendis numquam sit quaerat ipsam labore veniam facilis nobis
+          {"Do'ktor bilan quydagilardan biri orqali bo'glanishingiz mumkun, O'z salomatligizni asrang."}
         </p>
       </div>
       <section className=" mb-6 rounded-b-md    container mx-auto  relative py-6 flex flex-wrap   justify-between ">
@@ -161,7 +160,8 @@ const Contact = () => {
           </div>
           <div className=" mx-1 bg-slate-900 rounded p-3 py-6 flex justify-center flex-col items-center w-full ">
             <Link
-              href={""}
+              href={"https://maps.app.goo.gl/L89ohQEenR4fcLKP7"}
+              target={"_blank"}
               className="  bg-slate-900  rounded-full p-3 duration-500 hover:scale-105"
             >
               <svg
@@ -192,9 +192,8 @@ const Contact = () => {
             <input
               ref={ism}
               type="text"
-              className={`w-full bg-transparent rounded border ${
-                errorI ? "border-red-500" : "border-gray-300"
-              } text-base outline-none text-gray-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
+              className={`w-full bg-transparent rounded border ${errorI ? "border-red-500" : "border-gray-300"
+                } text-base outline-none text-gray-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
             />
           </div>
           <div className="relative mb-4">
@@ -209,9 +208,8 @@ const Contact = () => {
             <input
               ref={yosh}
               type="number"
-              className={`w-full bg-transparent rounded border ${
-                errorY ? "border-red-500" : "border-gray-300"
-              } text-base outline-none text-gray-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
+              className={`w-full bg-transparent rounded border ${errorY ? "border-red-500" : "border-gray-300"
+                } text-base outline-none text-gray-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
             />
           </div>
           <div className="relative mb-4">
@@ -227,9 +225,8 @@ const Contact = () => {
               ref={massage}
               id="message"
               name="message"
-              className={`w-full bg-transparent rounded border ${
-                errorM ? "border-red-500" : "border-gray-300"
-              } h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out text-gray-200 `}
+              className={`w-full bg-transparent rounded border ${errorM ? "border-red-500" : "border-gray-300"
+                } h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out text-gray-200 `}
             ></textarea>
           </div>
           <button

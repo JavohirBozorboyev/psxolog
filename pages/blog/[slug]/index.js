@@ -78,6 +78,7 @@ const BlogSlug = () => {
             >
               {data?.body}
 
+
             </motion.p>
           </div>
         </motion.div>
