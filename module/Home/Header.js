@@ -57,20 +57,18 @@ const Header = () => {
             </motion.div>
             <motion.p
               variants={FadeInUP}
-              className="mt-6 font-[600] secondText text-slate-700 text-md lg:w-10/12"
+              className="mt-6 font-[600] secondText text-slate-700 text-md "
+              dangerouslySetInnerHTML={{ __html: "DOKTOR  TIBBIY PSIXOLOG. PSIXOTERAPEVT. <br /> 7-yillik ish tajribaga ega." }}
             >
-              {
-                "DOKTOR  TIBBIY PSIXOLOG. PSIXOTERAPEVT. 7-yillik ish tajribaga ega."
-              }
-              <br />
+
 
 
             </motion.p>
             <motion.p variants={FadeInUP}
               dangerouslySetInnerHTML={{
                 __html: `* Xavotir( trevoga) * Qo'rquv ( fobiya)
-           <br /> * Ipoxondriya<br /> * OKR ( yopishqoq fikrlar va xarakatlar) <br /> * Depressiya  tashxis qo'yish va davolash!`}}
-              className="mt-6 font-[600] secondText text-slate-700 text-bace lg:w-10/12 ">
+                <br /> * Ipoxondriya  <br /> * OKR ( yopishqoq fikrlar va xarakatlar) <br /> * Depressiya  tashxis qo'yish va davolash!`}}
+              className="mt-6 font-[600] secondText text-slate-700 text-bace ">
 
             </motion.p>
             <motion.div
@@ -79,7 +77,7 @@ const Header = () => {
             >
               <Link
                 href="/quiz"
-                className="px-6 text-sm titleText  uppercase py-2 font-bold bg-slate-900 rounded-sm text-white  border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
+                className="px-6 text-base titleText  uppercase py-2 font-bold bg-slate-900 rounded-sm text-white  border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
               >
                 testni boshlash
               </Link>
@@ -89,7 +87,7 @@ const Header = () => {
               >
                 <Link
                   href="https://youtube.com/channel/UCkB7jvRP4czJrAp7oSGPk2g"
-                  className="px-6 titleText py-2 font-bold text-red-600 flex items-center  ml-16 sm:ml-0"
+                  className="px-6 titleText text-sm py-2 font-bold text-red-600 flex border-b-2 rounded-sm border-red-600 items-center ml-10    sm:ml-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +98,7 @@ const Header = () => {
                   >
                     <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
                   </svg>
-                  YouTube
+                  {"YouTubedan ko'rish"}
                 </Link>
               </motion.div>
             </motion.div>

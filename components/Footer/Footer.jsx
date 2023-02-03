@@ -21,13 +21,13 @@ const Footer = () => {
       <footer className="p-4 mb-[74px] m-1 rounded md:rounded-none md:m-0  md:mb-0 bg-slate-900  shadow md:px-6 md:py-8 ">
         <div className=" container mx-auto sm:flex sm:items-center sm:justify-center">
 
-          <dic className="flex flex-col md:flex-row flex-wrap gap-4 mt-8 md:mt-0 items-center mb-6 sm:mb-0">
+          <dic className="flex flex-col md:flex-row flex-wrap gap-4 mt-4 md:mt-0 items-center mb-6 sm:mb-0">
             {NavLink.map((link, index) => {
               return (
                 <Link
                   key={index}
                   href={link.url}
-                  className={`text-lg secondText duration-500 hover:text-white text-gray-400
+                  className={`text-base secondText duration-500 hover:text-white text-gray-400
                      
                   `}
                 >
