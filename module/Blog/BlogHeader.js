@@ -40,7 +40,7 @@ const BlogHeader = () => {
         <div className="flex flex-col items-center">
           <motion.h1
             variants={FadeInUP}
-            className="text-3xl titleText md:text-4xl lg:text-5xl text-center text-slate-700 font-bold capitalize"
+            className="text-2xl titleText md:text-4xl lg:text-5xl text-center text-slate-700 font-bold capitalize"
           >
             MENING BLOGIM
           </motion.h1>

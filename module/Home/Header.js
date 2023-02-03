@@ -39,14 +39,14 @@ const Header = () => {
         animate="animate"
         className="  py-8   flex items-center"
       >
-        <div className="container relative m-auto px-3 sm:px-3 lg:p-0 flex flex-col items-center justify-between   md:flex-row   ">
+        <div className="container relative m-auto px-3 sm:px-3 lg:p-0 flex  items-center justify-between flex-col-reverse gap-10  md:flex-row   ">
           <motion.div
             variants={stagger}
             className="w-full md:w-1/2 flex flex-col justify-between  items-start"
           >
             <motion.div
               variants={FadeInUP}
-              className=" titleText text-4xl sm:text-5xl uppercase lg:text-6xl xl:text-6xl font-e mt-2 text-slate-900"
+              className=" titleText text-2xl sm:text-5xl uppercase lg:text-6xl xl:text-6xl font-e mt-2 text-slate-900"
             >
               {" "}
               Dedaxanov Dilshod
@@ -57,11 +57,21 @@ const Header = () => {
             </motion.div>
             <motion.p
               variants={FadeInUP}
-              className="mt-6 font-[600] secondText text-slate-700 text-lg lg:w-8/12 uppercase"
+              className="mt-6 font-[600] secondText text-slate-700 text-md lg:w-10/12"
             >
               {
                 "DOKTOR  TIBBIY PSIXOLOG. PSIXOTERAPEVT. 7-yillik ish tajribaga ega."
               }
+              <br />
+
+
+            </motion.p>
+            <motion.p variants={FadeInUP}
+              dangerouslySetInnerHTML={{
+                __html: `* Xavotir( trevoga) * Qo'rquv ( fobiya)
+           <br /> * Ipoxondriya<br /> * OKR ( yopishqoq fikrlar va xarakatlar) <br /> * Depressiya  tashxis qo'yish va davolash!`}}
+              className="mt-6 font-[600] secondText text-slate-700 text-bace lg:w-10/12 ">
+
             </motion.p>
             <motion.div
               variants={FadeInUP}
@@ -69,7 +79,7 @@ const Header = () => {
             >
               <Link
                 href="/quiz"
-                className="px-6 titleText  uppercase py-2 font-bold bg-slate-900 rounded-sm text-white  border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
+                className="px-6 text-sm titleText  uppercase py-2 font-bold bg-slate-900 rounded-sm text-white  border-2 border-slate-900 duration-500 hover:bg-transparent hover:text-slate-900"
               >
                 testni boshlash
               </Link>
@@ -97,7 +107,7 @@ const Header = () => {
           </motion.div>
           <motion.div
             variants={FadeInUP}
-            className="w-full md:w-1/2 flex justify-end mt-8 md:mt-0 z-[500]"
+            className="w-full md:w-1/2 flex justify-end   z-[500]"
           >
             <Image
               src={Avatar}
@@ -119,8 +129,8 @@ const Header = () => {
             className="bg-slate-900 w-[400px] h-[110%] absolute right-0 z-0  rounded-md hidden lg:block "
           ></motion.div>
         </div>
-      </motion.div>
-    </div>
+      </motion.div >
+    </div >
   );
 };
 

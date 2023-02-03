@@ -41,8 +41,8 @@ export default function Home() {
             <Info quizLength={quizCategory?.length} postLength={posts?.length} />
             <div className="container mx-auto py-20 px-3 md:px-0">
               <div className="flex flex-col  items-center">
-                <h1 className="text-slate-800 font-bold titleText text-4xl uppercase text-center  ">
-                 PSIXOLOG testlar
+                <h1 className="text-slate-800 font-bold titleText text-2xl uppercase text-center  ">
+                  {"PSIXODIAGNOSTIK TESTLAR"}
                 </h1>
                 <p className="text-slate-700 mt-4 secondText text-base md:text-lg   text-center md:w-1/2  ">
                   {"Quydagi testlarni yechish orqali, Siz o'zingizning PSIXOLOG xolatingiz haqida bilib oling. "} <br />

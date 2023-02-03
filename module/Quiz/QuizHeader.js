@@ -40,13 +40,13 @@ const QuizHeader = () => {
         <div className="flex flex-col items-center">
           <motion.h1
             variants={FadeInUP}
-            className="text-3xl titleText md:text-4xl lg:text-5xl text-center text-slate-700 font-bold capitalize"
+            className="text-2xl titleText md:text-4xl lg:text-5xl text-center text-slate-700 font-bold capitalize"
           >
-            PSXOLOGIK TESTLAR
+            PSIXODIAGNOSTIK TESTLAR
           </motion.h1>
           <motion.p
             variants={FadeInUP}
-            className=" lg:text-xl secondText text-center mt-6 w-full lg:w-1/2 "
+            className=" text-base lg:text-xl secondText text-center mt-6 w-full lg:w-1/2 "
           >
             {"Quydagi testlarni yechish orqali, Siz o'zingizning salomatligingiz haqida malumotlarni bilib oling."}
           </motion.p>

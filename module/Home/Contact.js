@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React, { useState, useRef } from "react";
-import { useRouter } from "next/navigation";
 import axios from "axios";
 import { showNotification } from "@mantine/notifications";
-import { Alert } from "@mantine/core";
 
 const Contact = () => {
   const ism = useRef(null);
@@ -12,7 +10,7 @@ const Contact = () => {
   const [errorM, setErrorM] = useState(false);
   const [errorI, setErrorI] = useState(false);
   const [errorY, setErrorY] = useState(false);
-  const router = useRouter();
+ 
 
   const handle = () => {
     if (ism.current.value.length >= 2) {
@@ -105,10 +103,10 @@ const Contact = () => {
   return (
     <>
       <div className="container px-3 md:px-0   mx-auto py-16 flex flex-col justify-center items-center text-center">
-        <h1 className="text-4xl titleText font-bold uppercase text-slate-900">
+        <h1 className="text-2xl titleText font-bold uppercase text-slate-900">
           {"Bog'lanish"}
         </h1>
-        <p className="mt-4 secondText text-md md:text-lg w-full md:w-[60%]">
+        <p className="mt-4 secondText text-base md:text-lg w-full md:w-[60%]">
           {"Do'ktor bilan quydagilardan biri orqali bo'glanishingiz mumkun. "} <br />
           {"O'z salomatligizni asrang!"}
         </p>

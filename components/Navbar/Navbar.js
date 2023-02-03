@@ -77,15 +77,15 @@ const Navbar = () => {
     <div>
       <motion.nav className="bg-slate-900 m-1 md:m-0 md:rounded-none rounded shadow border-b-[1px] relative">
         <div className="container mx-auto py-4 px-4 lg:px-0 flex flex-wrap items-center  justify-between ">
-          <div className="flex items-center justify-between w-full md:w-1/3 ">
+          <div className="flex items-center justify-between w-full lg:w-1/3 ">
             <Link
               onClick={() => setOpen(false)}
               href="/"
               className=" titleText text-white flex gap-2 items-center "
             >
-              <Image src={Logo} alt="Dedahanov Dilshod" width={30} height={'auto'} /> <span className="uppercase font-bold text-xl">Dedaxanov</span>
+              <Image src={Logo} alt="Dedahanov Dilshod" width={30} height={'auto'} /> <span className=" font-bold text-xl">Dr.DILSHOD</span>
             </Link>
-            <div className=" md:hidden " onClick={handler}>
+            <div className=" lg:hidden " onClick={handler}>
               {open ? (
                 <svg
                   clipRule="evenodd"
@@ -123,7 +123,7 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className={`  w-full mt-10 md:flex flex-col gap-1 md:w-1/3 md:mt-0 md:flex-row md:justify-center ${open ? "flex" : "hidden"
+            className={`  w-full mt-10 lg:flex flex-col gap-1 lg:w-1/3 lg:mt-0 lg:flex-row lg:justify-center ${open ? "flex" : "hidden"
               } `}
           >
             {NavLink.map((link, index) => {
@@ -132,7 +132,7 @@ const Navbar = () => {
                   key={index}
                   onClick={handler}
                   href={link.url}
-                  className={`text-lg block text-gray-400 secondText duration-500 hover:bg-slate-700 hover:text-white  p-4 rounded md:p-2 md:px-4 ${router.route === link.url ? "text-white bg-slate-700" : null
+                  className={`text-base block text-gray-400 secondText duration-500 hover:bg-slate-700 hover:text-white  p-4 rounded lg:p-2 lg:px-4 ${router.route === link.url ? "text-white bg-slate-700" : null
                     }`}
                 >
                   {link.name}
@@ -141,7 +141,7 @@ const Navbar = () => {
             })}
           </div>
           <div
-            className={` w-full mt-2 md:flex duration-500  items-center gap-2 md:w-1/3 md:mt-0 md:justify-end  md:gap-1 ${open ? "flex" : "hidden"
+            className={` w-full mt-2 lg:flex duration-500  items-center gap-2 lg:w-1/3 lg:mt-0 lg:justify-end  lg:gap-1 ${open ? "flex" : "hidden"
               } `}
           >
             <a

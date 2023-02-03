@@ -11,7 +11,7 @@ const AppLayout = ({ children }) => {
   return (
     <div>
       <Head lang="en">
-        <title>Psxolog</title>
+        <title>Dr.DILSHOD</title>
         <meta
           name="description"
           content="psxolog, test, Blogs, Quzi,  Dedahanov Dilshod Tohirovich,"
