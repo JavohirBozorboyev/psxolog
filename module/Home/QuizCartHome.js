@@ -14,13 +14,9 @@ const QuizCartHome = ({ quizCategory }) => {
                   href={`/quiz/${item.slug}`}
                   className="overflow-hidden rounded  bg-slate-900 p-6 lg:p-8"
                 >
-
-
                   <h2 className=" text-xl titleText text-center font-semibold text-slate-100">
                     {item.name.slice(0, 30)}
                   </h2>
-
-
                 </Link>
               );
             })}

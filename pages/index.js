@@ -45,7 +45,7 @@ export default function Home() {
                   {"PSIXODIAGNOSTIK TESTLAR"}
                 </h1>
                 <p className="text-slate-700 mt-4 secondText text-base md:text-lg   text-center md:w-1/2  ">
-                  {"Quydagi testlarni yechish orqali, Siz o'zingizning PSIXOLOG xolatingiz haqida bilib oling. "} <br />
+                  {"Quydagi testlarni yechish orqali, Siz o'zingizni PSIXOLOGIK xolatingiz haqida bilib oling. "} <br />
                   {
                     "Testlarni yechish uchun quydagi bo'limlardan birini tanlang."
                   }

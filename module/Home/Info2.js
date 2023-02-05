@@ -9,7 +9,7 @@ const Info2 = () => {
         </h1>
         <p className="text-center secondText mt-4 text-gray-50 text-md  md:text-lg mb-6">
           {
-            "Agar o'zingizda biror psxologik o'zgarishlar sezadigan bo'lsangiz yoki o'zingizni ruhiy holatizdan tashvishlanayotgan bo'lsangiz bizning testlarimmizni ishlab ko'ring va Men bilan bog'laning.."
+            "Agar o'zingizda biror psixologik o'zgarishlar sezadigan bo'lsangiz yoki o'zingizni ruhiy holatizdan tashvishlanayotgan bo'lsangiz bizning testlarimmizni ishlab ko'ring va Men bilan bog'laning.."
           }
         </p>
       </div>

@@ -48,7 +48,7 @@ const BlogHeader = () => {
             variants={FadeInUP}
             className=" lg:text-xl secondText text-center mt-6 w-full lg:w-1/2 "
           >
-            {"Inson psxologiyasiga doir maqolalar va suhbatlarni o'qing, Va o'zingizni salomatligingiz uchun foydali malumotlarni bilib oling."}
+            {"Inson psixologiyasiga doir maqolalar va suhbatlarni o'qing, Va o'zingizni salomatligingiz uchun foydali malumotlarni bilib oling."}
           </motion.p>
         </div>
         <motion.a

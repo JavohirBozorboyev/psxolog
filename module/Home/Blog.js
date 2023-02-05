@@ -10,7 +10,7 @@ const BlogSlider = ({ posts }) => {
             Mening Blogim
           </h1>
           <p className="text-slate-900 mt-4 secondText lg:text-slate-900 text-base   text-center md:w-1/2  ">
-            {"Inson psixologiya doir maqolalar va suhbatlarni o'qing va o'zingizni salomatligingiz uchun foydali ma'lumotlarni bilib oling."}
+            {"Inson psixikasiga doir maqolalar va suhbatlarni o'qing va o'zingizni salomatligingiz uchun foydali ma'lumotlarni bilib oling."}
           </p>
         </div>
       </div>

@@ -34,15 +34,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
         ...e,
         { test_id: test[currentQuestion].id, answer_id: +val },
       ]);
-
-
-      setInterval(async () => {
-        await AnswerApiPost()
-      }, 1000)
-
-
     }
-
   };
 
   async function AnswerApiPost() {
@@ -86,13 +78,26 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
 
   return (
     <div className=" min-h-screen flex items-center ">
-      {showScore ? (
+      {showScore ? (getApiButtonState === false ? <div className="flex justify-center  w-full">
+        <Button
+          variant="default"
+          size="md"
+          onClick={() => {
+            AnswerApiPost();
+            setGetApiButtonState(true)
+          }}
+          style={{ letterSpacing: "2px" }}
+          className="border-2 border-slate-900 rounded  uppercase titleText hover:bg-slate-700 active:bg-slate-700 text-slate-900"
+        >
+          Malumotlarni Yuklash
+        </Button></div> :
         <div className="container mx-auto p-4">
           {" "}
           <h1 className="text-2xl text-slate-900 uppercase titleText text-center">
             Sizning Natijangiz{" "}
           </h1>{" "}
           <div>
+
             {loadApiAnswer === true ? <div className="text-xl secondText">
               <h1 className="text-center mt-4 text-gray-700">
                 {answerApi.message}
@@ -108,7 +113,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
               </h1>
             </div>
               :
-              <h1 className=" text-center my-6 text-2xl titleText text-blue-500">Loading...</h1>}
+              <h1 className=" text-center my-6 text-2xl titleText text-blue-500">Malumotlar yuklanmoqda...</h1>}
           </div>
           <div className="mt-6 flex justify-center">
             <Button

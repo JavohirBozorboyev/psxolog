@@ -48,7 +48,7 @@ const QuizHeader = () => {
             variants={FadeInUP}
             className=" text-base lg:text-xl secondText text-center mt-6 w-full lg:w-1/2 "
           >
-            {"Quydagi testlarni yechish orqali, Siz o'zingizning salomatligingiz haqida malumotlarni bilib oling."}
+            {"Quydagi testlarni yechish orqali, Siz o'zingizni salomatligingiz haqida malumotlarni bilib oling."}
           </motion.p>
         </div>
         <motion.a
