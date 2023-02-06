@@ -89,7 +89,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
           style={{ letterSpacing: "2px" }}
           className="border-2 border-slate-900 rounded  uppercase titleText hover:bg-slate-700 active:bg-slate-700 text-slate-900"
         >
-          Malumotlarni Yuklash
+          Natijani Ko'rish
         </Button></div> :
         <div className="container mx-auto p-4">
           {" "}
