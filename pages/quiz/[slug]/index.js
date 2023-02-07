@@ -25,7 +25,7 @@ const index = () => {
   return (
     <div>
       <Head>
-        <title>Psxolog | Slug Page</title>
+        <title>Dr.DILSHOD | Slug Page</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"

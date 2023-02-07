@@ -18,7 +18,7 @@ const index = () => {
   return (
     <div>
       <Head>
-        <title>Psxolog | Quiz</title>
+        <title>Dr.DILSHOD | Quiz</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"

@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Avatar from "./avatar.jpg";
 import { motion } from "framer-motion";
-
+import useSWR from "swr";
+import Loading from "../../components/Loader/Loading";
 const easing = [0.6, -0.5, 0.01, 0.99];
 
 const FadeInUP = {
@@ -32,6 +33,12 @@ const stagger = {
 };
 
 const Header = () => {
+  const { data: person, error } = useSWR("/api/personal_info/");
+
+
+  if (!person) {
+    return <Loading />
+  }
   return (
     <div>
       <motion.div
@@ -66,8 +73,8 @@ const Header = () => {
             </motion.p>
             <motion.p variants={FadeInUP}
               dangerouslySetInnerHTML={{
-                __html: `* Xavotir( trevoga) * Qo'rquv ( fobiya)
-                <br /> * Ipoxondriya  <br /> * OKR ( yopishqoq fikrlar va xarakatlar) <br /> * Depressiya  tashxis qo'yish va davolash!`}}
+                __html: `${person[0]?.body}`
+              }}
               className="mt-6 font-[600] secondText text-slate-700 text-bace ">
 
             </motion.p>
@@ -105,13 +112,16 @@ const Header = () => {
           </motion.div>
           <motion.div
             variants={FadeInUP}
-            className="w-full md:w-1/2 flex justify-end   z-[500]"
+            className="w-ful l md:w-1/2 flex justify-center md:justify-end   z-[500]"
           >
             <Image
-              src={Avatar}
+              src={`${person[0]?.photo}`}
+              width={500}
+              height={500}
+              blurDataURL={`${person[0]?.body}`}
               placeholder="blur"
               alt="Shifokor, psiholog, do'ktor"
-              className="w-[500px] z-20 lg:mr-10  rounded "
+              className=" z-20 lg:mr-10  rounded "
             />
           </motion.div>
           <motion.div

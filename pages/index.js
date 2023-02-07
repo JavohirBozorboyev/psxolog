@@ -19,13 +19,15 @@ export default function Home() {
     refreshInterval: 1000,
   });
 
+ 
+
   if (error) {
     return <Offline />;
   }
   return (
     <>
       <Head>
-        <title>Psxolog</title>
+        <title>Dr.DILSHOD</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:title"

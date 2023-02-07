@@ -32,6 +32,7 @@ const AppLayout = ({ children }) => {
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
         <link rel="icon" href="/favicon1.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <main>
         {router.route !== "/login" ? <Navbar /> : null}
