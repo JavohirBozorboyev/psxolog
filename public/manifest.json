@@ -1,11 +1,11 @@
 {
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "Dr.DILSHOD",
-  "short_name": "Dr.DILSHOD",
+  "short_name": "Dr.DILSHOD`",
   "icons": [
     {
       "src": "/icon-192x192.png",
