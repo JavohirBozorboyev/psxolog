@@ -7,7 +7,7 @@ const withPWA = require('next-pwa')({
   sw: 'service-worker.js',
   dest: 'public',
   skipWaiting: true,
-  
+
 })
 
 module.exports = withPWA({
