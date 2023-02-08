@@ -35,8 +35,13 @@ const QuizSlugCard = ({
     setOpened(!opened);
     setActiveModal(true);
   };
+
+
+
   const StartTest = () => {
     setStartLoading(true);
+
+
 
     if (itemData != null) {
       axios
@@ -130,7 +135,7 @@ const QuizSlugCard = ({
             />
           </Box>
           <Box>
-            <Radio.Group defaultValue={gender} withAsterisk onChange={setGender}>
+            <Radio.Group defaultValue={'man'} withAsterisk onChange={(e) => setGender(e)}>
               <Radio value="man" label="Erkak" />
               <Radio value="woman" label="Ayol" />
             </Radio.Group>
