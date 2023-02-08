@@ -30,7 +30,7 @@ const QuizSlugCard = ({
   const [startLoading, setStartLoading] = useState(false);
   let name = useRef(null);
   let age = useRef(null);
-  let [gender, setGender] = useState("");
+  let [gender, setGender] = useState("man");
   const alf = () => {
     setOpened(!opened);
     setActiveModal(true);
@@ -130,7 +130,7 @@ const QuizSlugCard = ({
             />
           </Box>
           <Box>
-            <Radio.Group defaultValue="man" withAsterisk onChange={setGender}>
+            <Radio.Group defaultValue={gender} withAsterisk onChange={setGender}>
               <Radio value="man" label="Erkak" />
               <Radio value="woman" label="Ayol" />
             </Radio.Group>
