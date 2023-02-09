@@ -40,9 +40,6 @@ const QuizSlugCard = ({
 
   const StartTest = () => {
     setStartLoading(true);
-
-
-
     if (itemData != null) {
       axios
         .get(`/api/subcategory/${itemData.slug}/`)

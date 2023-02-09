@@ -73,12 +73,14 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
 
   }
 
+  
+
 
 
 
   return (
     <div className=" min-h-screen flex items-center ">
-      {showScore ? (getApiButtonState === false ? <div className="flex justify-center  w-full">
+      {showScore ? (getApiButtonState === false ? <div className="flex justify-center  w-full ">
         <Button
           variant="default"
           size="md"
@@ -87,7 +89,7 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
             setGetApiButtonState(true)
           }}
           style={{ letterSpacing: "2px" }}
-          className="border-2 border-slate-900 rounded  uppercase titleText hover:bg-slate-700 active:bg-slate-700 text-slate-900"
+          className="border-2 border-slate-900  rounded  uppercase titleText hover:bg-slate-700 hover:text-white active:scale-95"
         >
           {"Natijani Ko'rish"}
         </Button></div> :
@@ -104,6 +106,9 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
               </h1>
               <h1 className="text-center mt-4 text-slate-900">
                 {answerApi.tashxis}
+              </h1>
+              <h1 className="text-center mt-4 text-slate-900">
+                {answerApi.tafsiya}
               </h1>
               <h1 className="text-center mt-4 text-gray-600">
                 {answerApi.doctor}

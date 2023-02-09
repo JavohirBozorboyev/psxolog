@@ -213,7 +213,7 @@ const Contact = () => {
           </div>
           <div className="relative mb-4">
             <label className="leading-7 titleText text-sm text-gray-200">
-              Message{" "}
+              Habar{" "}
               {errorM ? (
                 <p className="text-red-400">
                   {"Eng Kamida 5 so'zdan iborat matin kiriting"}
