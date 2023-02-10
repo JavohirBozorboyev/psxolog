@@ -73,11 +73,6 @@ const Question = ({ setActiveQuestionCard, cardData }) => {
 
   }
 
-  
-
-
-
-
   return (
     <div className=" min-h-screen flex items-center ">
       {showScore ? (getApiButtonState === false ? <div className="flex justify-center  w-full ">

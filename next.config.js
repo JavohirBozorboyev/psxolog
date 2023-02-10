@@ -14,7 +14,7 @@ module.exports = withPWA({
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["https://backend.tibbiypsihologiya.uz", 'backend.tibbiypsihologiya.uz'],
+    domains: ["https://backend.tibbiypsixologiya.uz", 'backend.tibbiypsixologiya.uz'],
 
   },
 })

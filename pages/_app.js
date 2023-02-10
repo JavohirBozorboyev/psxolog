@@ -5,7 +5,7 @@ import { SWRConfig } from "swr";
 import axios from "axios";
 import { NotificationsProvider } from "@mantine/notifications";
 
-axios.defaults.baseURL = "https://backend.tibbiypsihologiya.uz";
+axios.defaults.baseURL = "https://backend.tibbiypsixologiya.uz";
 
 const fetcher = (url) => axios.get(url).then((res) => res.data);
 function MyApp({ Component, pageProps }) {
