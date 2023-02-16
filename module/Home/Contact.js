@@ -10,7 +10,7 @@ const Contact = () => {
   const [errorM, setErrorM] = useState(false);
   const [errorI, setErrorI] = useState(false);
   const [errorY, setErrorY] = useState(false);
- 
+
 
   const handle = () => {
     if (ism.current.value.length >= 2) {
@@ -129,7 +129,7 @@ const Contact = () => {
               </svg>
             </Link>
             <Link
-              href={"tel:+998993912505"}
+              href={"tel:+998902750030"}
               className="text-white titleText  hover:text-sky-500 inline-block  w-full p-3 text-center  "
             >
               +99 890 275 00 30
@@ -213,7 +213,7 @@ const Contact = () => {
           </div>
           <div className="relative mb-4">
             <label className="leading-7 titleText text-sm text-gray-200">
-              Habar{" "}
+              Habar:{" "}
               {errorM ? (
                 <p className="text-red-400">
                   {"Eng Kamida 5 so'zdan iborat matin kiriting"}

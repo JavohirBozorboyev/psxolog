@@ -68,8 +68,6 @@ const Header = () => {
               dangerouslySetInnerHTML={{ __html: "DOKTOR  TIBBIY PSIXOLOG. PSIXOTERAPEVT. <br /> 7-yillik ish tajribaga ega." }}
             >
 
-
-
             </motion.p>
             <motion.p variants={FadeInUP}
               dangerouslySetInnerHTML={{
