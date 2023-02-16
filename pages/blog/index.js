@@ -20,11 +20,7 @@ const Blog = () => {
       <Head>
         <title>Dr.DILSHOD || Blogs</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          property="og:title"
-          content="psxolog, doctor Blogs  "
-          key="psxolog, doctor"
-        />
+
         <meta name="google" content="notranslate" />
       </Head>
       <main>

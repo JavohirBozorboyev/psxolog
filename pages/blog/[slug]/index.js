@@ -41,8 +41,8 @@ const BlogSlug = () => {
         <meta
           name="description"
           property="og:title"
-          content={`psxolog, doctor ${data?.body}, ${data?.title} `}
-          key={`psxolog, doctor ${data?.title} `}
+          content={` ${data?.body}, ${data?.title} `}
+          key={` ${data?.title} `}
         />
       </Head>
       <motion.main initial="initial" animate="animate" className="py-10">

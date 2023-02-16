@@ -25,13 +25,9 @@ const index = () => {
   return (
     <div>
       <Head>
-        <title>Dr.DILSHOD | Slug Page</title>
+        <title>Dr.DILSHOD</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          property="og:title"
-          content="psxolog, doctor "
-          key="psxolog, doctor"
-        />
+
         <meta name="google" content="notranslate" />
       </Head>
       <main className="py-8">

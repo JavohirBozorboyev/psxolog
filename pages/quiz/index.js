@@ -20,11 +20,7 @@ const index = () => {
       <Head>
         <title>Dr.DILSHOD | Quiz</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          property="og:title"
-          content="psxolog, doctor "
-          key="psxolog, doctor"
-        />
+        
         <meta name="google" content="notranslate" />
       </Head>
       

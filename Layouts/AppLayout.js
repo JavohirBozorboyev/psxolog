@@ -14,7 +14,7 @@ const AppLayout = ({ children }) => {
         <title>Dr.DILSHOD</title>
         <meta
           name="description"
-          content="psxolog, test, Blogs, Quzi,  Dedahanov Dilshod Tohirovich,"
+          content="Psixolog, Test, Blogs, Quzi,"
         />
         <meta name="google" content="notranslate" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />

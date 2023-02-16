@@ -19,7 +19,7 @@ export default function Home() {
     refreshInterval: 1000,
   });
 
- 
+
 
   if (error) {
     return <Offline />;
@@ -29,11 +29,7 @@ export default function Home() {
       <Head>
         <title>Dr.DILSHOD</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          property="og:title"
-          content="psxolog, doctor "
-          key="psxolog, doctor"
-        />
+
         <meta name="google" content="notranslate" />
       </Head>
       <main>
