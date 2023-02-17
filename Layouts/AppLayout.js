@@ -16,9 +16,10 @@ const AppLayout = ({ children }) => {
           name="description"
           content="Psixolog, Test, Blogs, Quzi,"
         />
+        <meta name="google-site-verification" content="YdTGqUbXk4DeqcWzM2myF_6NvEQaXprX-cQCWr-kV_4" />
         <meta name="google" content="notranslate" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Psxolog" />
+        <meta name="apple-mobile-web-app-title" content="Psixolog" />
 
         <meta name="format-detection" content="telephone=yes" />
         <meta name="mobile-web-app-capable" content="yes" />

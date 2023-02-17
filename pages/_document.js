@@ -10,6 +10,7 @@ export default function Document() {
     <Html>
       <Head>
         <title>Dr.DILSHOD</title>
+        <meta name="google-site-verification" content="YdTGqUbXk4DeqcWzM2myF_6NvEQaXprX-cQCWr-kV_4" />
         <meta name='application-name' content={APP_NAME} />
         <meta name='apple-mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-status-bar-style' content='default' />
