@@ -64,8 +64,8 @@ const Header = () => {
             </motion.div>
             <motion.p
               variants={FadeInUP}
-              className="mt-6 font-[600] secondText text-slate-700 text-md "
-              dangerouslySetInnerHTML={{ __html: "DOKTOR  TIBBIY PSIXOLOG. PSIXOTERAPEVT. <br /> 7-yillik ish tajribaga ega." }}
+              className="mt-6 font-[600] w-full secondText text-slate-700 text-md "
+              dangerouslySetInnerHTML={{ __html: "DOKTOR  TIBBIY PSIXOLOG. PSIXOTERAPEVT. <br /> 7-yillik ish tajribasiga ega." }}
             >
 
             </motion.p>
@@ -73,7 +73,7 @@ const Header = () => {
               dangerouslySetInnerHTML={{
                 __html: `${person[0]?.body}`
               }}
-              className="mt-6 font-[600] secondText text-slate-700 text-bace ">
+              className="mt-6 font-[600]  w-full secondText text-slate-700 text-bace ">
 
             </motion.p>
             <motion.div

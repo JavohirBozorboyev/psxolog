@@ -14,13 +14,8 @@ const Info2 = () => {
         </p>
       </div>
       <div
-        className=" min-h-[300px] absolute w-full top-0  blur-md z-0"
-        style={{
-          background:
-            " url(https://ardenthealth.com/sites/default/files/portfolio/BSA%2001.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className=" min-h-[300px] absolute w-full top-0  blur-md z-0 bg-slate-700"
+        
       ></div>
     </div>
   );

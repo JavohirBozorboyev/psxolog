@@ -1,20 +1,12 @@
 /** @type {import('next').NextConfig} */
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  disable: process.env.NODE_ENV === 'development',
-  register: true,
-  scope: '/app',
-  sw: 'service-worker.js',
-  dest: 'public',
-  skipWaiting: true,
 
-})
-
-module.exports = withPWA({
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
     domains: ["https://backend.tibbiypsixologiya.uz", 'backend.tibbiypsixologiya.uz'],
 
   },
-})
+}
+
+module.exports = nextConfig
