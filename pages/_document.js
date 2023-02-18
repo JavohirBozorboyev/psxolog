@@ -11,7 +11,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Psixolog, Test, Blogs, Quiz,"
+          content="Psixolog, Psixoterapevt, Doktor"
         />
         <meta name="google-site-verification" content="YdTGqUbXk4DeqcWzM2myF_6NvEQaXprX-cQCWr-kV_4" />
         <meta name='application-name' content={APP_NAME} />
